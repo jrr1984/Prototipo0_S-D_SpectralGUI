@@ -2,7 +2,7 @@
 This example shows how to communicate with Thorlabs KST101, KCube Stepper Motor.
 """
 
-# this "if" statement is used so that Sphinx does not execute this script when the docs are being built
+# https://es.stackoverflow.com/questions/32165/qu%C3%A9-es-if-name-main
 if __name__ == '__main__':
     import os
     from pprint import pprint
@@ -46,10 +46,10 @@ if __name__ == '__main__':
     #motor.start_polling(200)
 
     # home the device
-    print('Homing...')
-    motor.home()
-    wait(0)
-    print('Homing done. At position {} [device units]'.format(motor.get_position()))
+    #print('Homing...')
+    #motor.home()
+    #wait(0)
+    #print('Homing done. At position {} [device units]'.format(motor.get_position()))
 
     #motor.stop_polling()
     motor.disconnect()
