@@ -40,16 +40,16 @@ if __name__ == '__main__':
     print('Connected to {}'.format(motor))
 
     # load the configuration settings (so that we can use the get_real_value_from_device_unit() method)
-    #motor.load_settings()
+    motor.load_settings()
 
     # start polling at 200 ms
     #motor.start_polling(200)
 
     # home the device
-    #print('Homing...')
-    #motor.home()
-    #wait(0)
-    #print('Homing done. At position {} [device units]'.format(motor.get_position()))
+    print('Homing...')
+    motor.home()
+    wait(0)
+    print('Homing done. At position {} [device units]'.format(motor.get_position()))
 
     #motor.stop_polling()
     motor.disconnect()
