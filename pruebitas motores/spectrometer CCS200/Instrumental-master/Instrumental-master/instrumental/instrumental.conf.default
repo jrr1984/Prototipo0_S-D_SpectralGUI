@@ -1,0 +1,34 @@
+# Instrumental config file
+#
+# Settings are organized under sections denoted by headings [section name]
+# Within each section, settings are written in key = value form.
+# Don't use quotation marks around the values.
+
+[servers] #--------------------------------------------------------------------
+# This section lists available Instrumental servers and their addresses in
+# host:port form. The keys are server aliases.
+
+#myServer = 0.0.0.0:28265
+
+
+[instruments] #----------------------------------------------------------------
+# This section includes instruments and their parameters. The keys are aliases,
+# and the values are written as python dicts of instrument parameters. See the
+# examples below for more info.
+
+# VISA instruments
+#myScope = {'visa_address': 'TCPIP::0.0.0.1::INSTR'}
+#myAFG = {'visa_address': 'TCPIP::0.0.0.2::INSTR'}
+
+# NI-DAQ device
+#myDAQ = {'nidaq_devname': 'Dev1'}
+
+# Thorlabs/uEye camera
+#myCam = {'ueye_cam_id': 2}
+
+
+[prefs] #----------------------------------------------------------------------
+# This section is for miscellaneous user-specific preferences.
+
+# This is a path to the root directory where data files will be saved
+data_directory = ~/Data
