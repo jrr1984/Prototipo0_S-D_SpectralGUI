@@ -1,6 +1,0 @@
-pint
-numpy
-scipy
-numpydoc
-matplotlib
-ipython
