@@ -130,6 +130,13 @@ class ThorlabsStageWithStepMotors:
         return float('%.7f'%(4.9785334303194085e-07*device_units - 3.6926158834568621e-12))
     def from_mm_to_device_units(self,mm):
         return int(2008623.651917194*mm + 7.4189049903691962e-06)
+
+    def get_x_y_position(self):
+        pos_x = self.motorx.get_position()
+        x = self.motorx.get_real_value_from_device_unit(pos_x, 'DISTANCE')
+        pos_y = self.motory.get_position()
+        y = self.motory.get_real_value_from_device_unit(pos_y, 'DISTANCE')
+        return x,y
     
     def go_home(self):
         self.motorx.start_polling(200)
