@@ -1,13 +1,17 @@
 import os
-#import sys
-from pprint import pprint
+import logging
+from logging.handlers import SocketHandler
+
 
 from msl.equipment import EquipmentRecord, ConnectionRecord, Backend
 
 from msl.equipment.resources.thorlabs import MotionControl
 # ensure that the Kinesis folder is available on PATH
 os.environ['PATH'] += os.pathsep + 'C:/Program Files/Thorlabs/Kinesis'
-
+log = logging.getLogger('Root logger')
+log.setLevel(1)  # to send all messages to cutelog
+socket_handler = SocketHandler('127.0.0.1', 19996)  # default listening address
+log.addHandler(socket_handler)
 
 
 
@@ -95,29 +99,28 @@ class ThorlabsStageWithStepMotors:
             message_type, message_id, _ = motor.wait_for_message()
             
     def move_to_x_y(self,x,y):
-        x=x/1000 #en micrones
-        y=y/1000 #en micrones
         try:
-            self.motory.load_settings()
+            log.info('Moving to position ({},{})'.format(x,y))
             self.motorx.load_settings()
+            self.motory.load_settings()
             self.motorx.move_to_position(self.motorx.get_device_unit_from_real_value(x,0))
             self.motory.move_to_position(self.motory.get_device_unit_from_real_value(y,0))
-            
+            while (self.get_x_y_position() <= (dx - 0.05, 0.0)):
+                time.sleep(0.1)
         except:
-            print('moved with alternative way')
             self.motorx.move_to_position(self.from_mm_to_device_units(x))
             self.motory.move_to_position(self.from_mm_to_device_units(y))     
             
-    def disconnect_stage(self):
+    def close(self):
         # stop polling and close the connection
         self.motorx.home()
         self.motory.home()
-        print('Homing..')
+        #print('Homing..')
         self.motorx.stop_polling()
         self.motory.stop_polling()
         self.motory.disconnect()
         self.motorx.disconnect()
-        print('Stage disconnected')
+        log.info('Stage of stepper motors DISCONNECTED')
         
     def get_vel_params(self):
         print(self.motorx.get_vel_params())
@@ -202,7 +205,7 @@ class ThorlabsStageWithStepMotors:
             self.motory.home()
             #self.wait(0,self.motorx)
             #self.wait(0,self.motory)
-            print('Stage connected.')
+            log.info('Stage of stepper motors CONNECTED')
         except:
             print("Can-t load settings")
              # start polling at 200 ms
@@ -211,5 +214,5 @@ class ThorlabsStageWithStepMotors:
             #print('Homing both motors...')
             self.motorx.home()
             self.motory.home()
-            print('Stage connected.')          
+            log.info('Stage of stepper motors CONNECTED')
 

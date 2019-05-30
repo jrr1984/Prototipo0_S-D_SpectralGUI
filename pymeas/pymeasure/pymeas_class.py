@@ -2,9 +2,8 @@ import logging
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())
 import numpy as np
-from thor_stepm import ThorlabsStageWithStepMotors
+from pymeasure.thor_stepm import ThorlabsStageWithStepMotors
 # Import necessary packages
-from pymeasure.instruments.keithley import Keithley2400
 from pymeasure.experiment import Procedure
 from pymeasure.experiment import IntegerParameter, FloatParameter
 import time

@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pymeas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymeas_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pymeas_trials.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../syst/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../syst/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../syst/.idea/syst.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../syst/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/barrido_sin_threads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/thor_stepm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/CCS200.py" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/CCS200.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pymeas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pymeas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/lextab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pymeas_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/pymeas_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pymeas_trials.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/pymeas_trials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/thor_stepm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yacctab.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/yacctab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../syst/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/lextab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../syst/syst.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/syst.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/thread stuff and pymeasure.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/thread stuff and pymeasure.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../syst/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/thor_stepm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,21 +28,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pymeas_trials.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/barrido/stage_and_spec_connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="63">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pymeas_class.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/barrido/thor_stepm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-66">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,6 +78,12 @@
     <findStrings>
       <find>num</find>
       <find>sys</find>
+      <find>set_st</find>
+      <find>CONNECTED</find>
+      <find>move_t</find>
+      <find>disconnec</find>
+      <find>log</find>
+      <find>disconn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,6 +95,10 @@
         <option value="$PROJECT_DIR$/pymeas_class.py" />
         <option value="$PROJECT_DIR$/thor_stepm.py" />
         <option value="$PROJECT_DIR$/pymeas_trials.py" />
+        <option value="$PROJECT_DIR$/barrido_sin_threads.py" />
+        <option value="$PROJECT_DIR$/barrido/barrido_sin_threads.py" />
+        <option value="$PROJECT_DIR$/barrido/thor_stepm.py" />
+        <option value="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
       </list>
     </option>
   </component>
@@ -95,6 +123,11 @@
               <item name="pymeas" type="b2602c69:ProjectViewProjectNode" />
               <item name="pymeas" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pymeas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pymeas" type="462c0819:PsiDirectoryNode" />
+              <item name="barrido" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -105,7 +138,17 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/barrido" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure" />
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -119,8 +162,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.thor_stepm">
-    <configuration name="pymeas_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.stage_and_spec_connection">
+    <configuration name="barrido_sin_threads" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,11 +171,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pymeas_class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/barrido_sin_threads.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,7 +196,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pymeas_trials.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure\pymeas_trials.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stage_and_spec_connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pymeas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="thor_stepm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pymeas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/thor_stepm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -174,7 +259,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thor_stepm.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure\thor_stepm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,9 +270,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.stage_and_spec_connection" />
+        <item itemvalue="Python.barrido_sin_threads" />
+        <item itemvalue="Python.thor_stepm (1)" />
         <item itemvalue="Python.thor_stepm" />
         <item itemvalue="Python.pymeas_trials" />
-        <item itemvalue="Python.pymeas_class" />
       </list>
     </recent_temporary>
   </component>
@@ -206,29 +293,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1996805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19952305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.3283582" />
-      <window_info anchor="bottom" id="Python Console" weight="0.3283582" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3283582" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3283582" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.744403" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.214539" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="8" visible="true" weight="0.3280142" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3280142" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thor_stepm.py">
+    <entry file="file://$PROJECT_DIR$/pymeasure/thor_stepm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
@@ -238,17 +326,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pymeas_trials.py">
+    <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_trials.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="704">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pymeas_class.py">
+    <entry file="file://$PROJECT_DIR$/example.csv" />
+    <entry file="file://$PROJECT_DIR$/barrido/lextab.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="264">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/thor_stepm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/stage_and_spec_connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
