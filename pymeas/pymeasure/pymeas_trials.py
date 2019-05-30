@@ -11,7 +11,7 @@ from pymeasure.experiment import Results, Worker
 #from pymeasure.experiment import IntegerParameter,FloatParameter
 #from instrumental import instrument,list_instruments,u, Q_
 #from instrumental.drivers.spectrometers.thorlabs_ccs import CCS
-from pymeas_class import XYmove
+from pymeasure.pymeas_class import XYmove
 #paramsets = list_instruments()
 #print(paramsets)
 #ccs = instrument(paramsets[0])
