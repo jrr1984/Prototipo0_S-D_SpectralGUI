@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/barrido/StageAndSpec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/barrido/ccs_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrido/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/StageAndSpec.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrido/barrido_sin_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/barrido_sin_threads.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrido/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/lextab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/thor_stepm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/lextab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectrometer/ccs200m.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../spectrometer/ccs200m.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/ccs200m.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/ccs200m.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/lextab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/syst.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/syst.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/thor_stepm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../syst/xystageclass.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../syst/xystageclass.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="293">
+              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -56,8 +47,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/barrido/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="315">
+              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="653">
+              <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -76,10 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stage</find>
-      <find>set</find>
-      <find>set_st</find>
-      <find>disconne</find>
       <find>sleep</find>
       <find>def wait</find>
       <find>wait_for</find>
@@ -106,6 +105,10 @@
       <find>Init</find>
       <find>ccs</find>
       <find>positio</find>
+      <find>appen</find>
+      <find>append</find>
+      <find>yield</find>
+      <find>long</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,8 +124,9 @@
         <option value="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
         <option value="$PROJECT_DIR$/barrido/thor_stepm.py" />
         <option value="$PROJECT_DIR$/barrido/ccs_tests.py" />
-        <option value="$PROJECT_DIR$/barrido/StageAndSpec.py" />
         <option value="$PROJECT_DIR$/barrido/barrido_sin_threads.py" />
+        <option value="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" />
+        <option value="$PROJECT_DIR$/barrido/StageAndSpec.py" />
       </list>
     </option>
   </component>
@@ -320,7 +324,7 @@
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16852146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -377,6 +381,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/intensidad.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/barrido/ccs_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -387,13 +394,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/barrido/intensidad.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="293">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -402,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/barrido/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="315">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
