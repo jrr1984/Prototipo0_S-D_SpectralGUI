@@ -26,6 +26,8 @@ class StageAndSpec():
         self.stage.close()
 
     def scan(self,dx,x_array_scan,dy,y_array_scan):
+        intensidad = []
+        long_de_onda = []
         state = 'Init'
         success = False
         y = 0.0
@@ -36,9 +38,11 @@ class StageAndSpec():
                 log.info('INITIAL STATE y=0, FORWARD IN X')
                 for i in x_array_scan:
                     self.stage.move_to_x_y(i, y)
-                    intens_initial,longi_initial=self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
-                    yield intens_initial,longi_initial
+                    intens,longi=self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
+                    intensidad.append(intens)
+                    long_de_onda.append(longi)
                     log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
+
                 self.stage.move_to_x_y(x_array_scan[-1], y)
                 y += dy
                 state = 'Reversed x'
@@ -46,8 +50,9 @@ class StageAndSpec():
                 log.info('STATE REVERSED X')
                 for i in reversed(x_array_scan):
                     self.stage.move_to_x_y(i, y)
-                    intens_reversed,long_reversed  = self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
-                    yield intens_reversed,long_reversed
+                    intens,longi  = self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
+                    intensidad.append(intens)
+                    long_de_onda.append(longi)
                     log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
                 self.stage.move_to_x_y(x_array_scan[-1], y)
                 if y == y_array_scan[-1]:
@@ -60,8 +65,9 @@ class StageAndSpec():
                 log.info('STATE FORWARD X')
                 for i in x_array_scan:
                     self.stage.move_to_x_y(i, y)
-                    intens_forward, longi_forward = self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
-                    yield intens_forward,longi_forward
+                    intens, longi = self.ccs.take_data(integration_time=None, num_avg=1, use_background=False)
+                    intensidad.append(intens)
+                    long_de_onda.append(longi)
                     log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
                 self.stage.move_to_x_y(x_array_scan[-1], y)
                 if y == y_array_scan[-1]:
@@ -69,6 +75,4 @@ class StageAndSpec():
                     log.info('FINISHED SCANNING.')
                 y += dy
                 state = 'Reversed x'
-
-
-
+        return intensidad,long_de_onda
