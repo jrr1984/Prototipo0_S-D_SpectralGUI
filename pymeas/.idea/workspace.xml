@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/masintelligent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/barrido/pruebas_con_pymeasure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pymeasure/StageAndSpecWithReturn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrido/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/StageAndSpec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrido/barrido_sin_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/barrido_sin_threads.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barrido/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido/lextab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pymeasure/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/lextab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pymeasure/pymeas_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/pymeasure/pymeas_class.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_class.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#1#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="161">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -33,22 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/barrido/ccs_tests.py">
+        <entry file="file://$PROJECT_DIR$/pymeasure/StageAndSpecWithReturn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/barrido/StageAndSpec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+            <state relative-caret-position="176">
+              <caret line="8" column="30" lean-forward="true" selection-start-line="5" selection-end-line="8" selection-end-column="30" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -57,10 +62,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py">
+        <entry file="file://$PROJECT_DIR$/barrido/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+            <state relative-caret-position="315">
+              <caret line="71" column="60" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="60" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -79,8 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sleep</find>
-      <find>def wait</find>
       <find>wait_for</find>
       <find>time</find>
       <find>move_to</find>
@@ -101,14 +104,16 @@
       <find>moving to</find>
       <find>wait</find>
       <find>format</find>
-      <find>log</find>
       <find>Init</find>
       <find>ccs</find>
       <find>positio</find>
       <find>appen</find>
       <find>append</find>
-      <find>yield</find>
       <find>long</find>
+      <find>yield</find>
+      <find>log</find>
+      <find>max_c</find>
+      <find>averages</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,10 +132,14 @@
         <option value="$PROJECT_DIR$/barrido/barrido_sin_threads.py" />
         <option value="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" />
         <option value="$PROJECT_DIR$/barrido/StageAndSpec.py" />
+        <option value="$PROJECT_DIR$/barrido/masintelligent.py" />
+        <option value="$PROJECT_DIR$/barrido/pruebas_con_pymeasure.py" />
+        <option value="$PROJECT_DIR$/pymeasure/StageAndSpecWithReturn.py" />
+        <option value="$PROJECT_DIR$/pymeasure/pymeas_class.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="30" />
     <option name="y" value="60" />
     <option name="width" value="3780" />
@@ -157,6 +166,11 @@
               <item name="pymeas" type="462c0819:PsiDirectoryNode" />
               <item name="barrido" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pymeas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pymeas" type="462c0819:PsiDirectoryNode" />
+              <item name="pymeasure" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -166,15 +180,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/barrido" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pymeasure" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure" />
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure" />
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
     </key>
@@ -191,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.barrido_sin_threads">
+  <component name="RunManager" selected="Python.pymeas_class">
     <configuration name="StageAndSpec" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,6 +220,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/StageAndSpec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StageAndSpecWithReturn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pymeas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -234,7 +270,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ccs_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="masintelligent" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,7 +282,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/ccs_tests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/masintelligent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,7 +291,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stage_and_spec_connection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pymeas_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,32 +299,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pymeasure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="thor_stepm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pymeas" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido/thor_stepm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pymeasure/pymeas_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,11 +314,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.pymeas_class" />
         <item itemvalue="Python.barrido_sin_threads" />
+        <item itemvalue="Python.StageAndSpecWithReturn" />
         <item itemvalue="Python.StageAndSpec" />
-        <item itemvalue="Python.ccs_tests" />
-        <item itemvalue="Python.stage_and_spec_connection" />
-        <item itemvalue="Python.thor_stepm (1)" />
+        <item itemvalue="Python.masintelligent" />
       </list>
     </recent_temporary>
   </component>
@@ -324,20 +339,20 @@
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16852146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21780604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.92907804" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.8812057" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.3280142" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007949" side_tool="true" weight="0.28368795" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6507092" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.8705674" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -366,13 +381,6 @@
     <entry file="file://$PROJECT_DIR$/barrido/lextab.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
     <entry file="file://$PROJECT_DIR$/barrido/thor_stepm.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -387,29 +395,36 @@
     <entry file="file://$PROJECT_DIR$/barrido/ccs_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="11" />
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/pruebas_con_pymeasure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#1#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/masintelligent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/barrido/StageAndSpecWithReturn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+        <state relative-caret-position="1518">
+          <caret line="69" column="92" selection-start-line="69" selection-start-column="92" selection-end-line="69" selection-end-column="92" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -417,9 +432,49 @@
     <entry file="file://$PROJECT_DIR$/barrido/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+          <caret line="71" column="60" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="60" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/pymeas/Lib/site-packages/pymeasure/experiment/parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2066">
+          <caret line="161" column="8" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido/barrido_sin_threads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pymeasure/StageAndSpecWithReturn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="5" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pymeasure/example.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
