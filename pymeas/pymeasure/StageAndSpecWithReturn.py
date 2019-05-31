@@ -1,6 +1,5 @@
 import time
 import logging
-import numpy as np
 from logging.handlers import SocketHandler
 from barrido.thor_stepm import ThorlabsStageWithStepMotors
 from instrumental import instrument,list_instruments
@@ -32,7 +31,6 @@ class StageAndSpec():
         success = False
         state = 'Init'
         y = 0.0
-
         while success == False:
             if state == 'Init':
                 for i in x_array_scan:
@@ -57,7 +55,6 @@ class StageAndSpec():
                     success = True
                 y += dy
                 state = 'Reversed x'
-
         return x_positions,y_positions
 
     def scan(self,dx,x_array_scan,dy,y_array_scan,num_avg):
@@ -65,14 +62,16 @@ class StageAndSpec():
         x_positions, y_positions = self.generate_positions_list(dx,x_array_scan,dy,y_array_scan)
         log.info('LISTA GENERADA')
         log.info('ANTES DEL FOR')
+        intensidad = []
+        long_de_onda = []
         for i, j in zip(x_positions, y_positions):
             self.stage.move_to_x_y(i,j)
-            intensidad,long_de_onda = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
+            intensity,wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
             log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
             if i == x_positions[-1] and j == y_positions[-1]:
                 log.info('FINISHED SCANNING.')
-            yield intensidad
-            yield long_de_onda
+            intensidad.append(intensity)
+            long_de_onda.append(wavelength)
 
 
 
