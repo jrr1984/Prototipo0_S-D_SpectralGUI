@@ -1,7 +1,7 @@
 import time
 import logging
 from logging.handlers import SocketHandler
-from barrido.thor_stepm import ThorlabsStageWithStepMotors
+from thor_stepm import ThorlabsStageWithStepMotors
 from instrumental import instrument,list_instruments
 log = logging.getLogger('Root logger')
 log.setLevel(1)  # to send all messages to cutelog
