@@ -12,13 +12,14 @@ log.addHandler(socket_handler)
 procedure = XYmove()
 procedure.num_avg = 5
 procedure.initial_x = 0
-procedure.final_x = 11
+procedure.final_x = 110
 procedure.initial_y = 0
-procedure.final_y = 11
-procedure.dx = 1
-procedure.dy = 1
+procedure.final_y = 110
+procedure.dx = 10
+procedure.dy = 10
 
-
+import time
+initial_time = time.time()
 data_filename = 'example.txt'
 log.info("Constructing the Results with a data file: %s" % data_filename)
 results = Results(procedure, data_filename)
@@ -36,3 +37,5 @@ log.info("Started the Worker")
 log.info("Joining with the worker in at most 1 hr")
 worker.join(timeout=3600) # wait at most 1 hr (3600 sec)
 log.info("Worker did his job, now pay him!")
+elapsed_time = time.time() - initial_time
+log.info('DURATION TIME: {}'.format(elapsed_time))

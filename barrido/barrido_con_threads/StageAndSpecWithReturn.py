@@ -72,7 +72,7 @@ class StageAndSpec():
                 log.info('FINISHED SCANNING.')
             intensidad.append(intensity)
             long_de_onda.append(wavelength)
-
+        return intensidad,long_de_onda
 
 
 
