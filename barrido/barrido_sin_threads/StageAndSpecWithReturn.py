@@ -2,14 +2,21 @@ import time
 import logging
 import numpy as np
 from logging.handlers import SocketHandler
-from barrido.thor_stepm import ThorlabsStageWithStepMotors
-from instrumental import instrument,list_instruments
+from thor_stepm import ThorlabsStageWithStepMotors
+from instrumental import instrument, list_instruments
 log = logging.getLogger('Root logger')
 log.setLevel(1)  # to send all messages to cutelog
 socket_handler = SocketHandler('127.0.0.1', 19996)  # default listening address
 log.addHandler(socket_handler)
 
 class StageAndSpec():
+
+    def __init__(self):
+        self.intensity = []
+        self.wavelength = []
+        self.step = 0
+        self.stop_program = False
+
 
     def connect(self):
         paramsets = list_instruments()
@@ -63,16 +70,17 @@ class StageAndSpec():
         x_positions, y_positions = self.generate_positions_list(dx,x_array_scan,dy,y_array_scan)
         log.info('LISTA GENERADA')
         log.info('ANTES DEL FOR')
-        intensidad = []
-        long_de_onda = []
         for i, j in zip(x_positions, y_positions):
+            if self.stop_program:
+                log.info('Stopping measurement - KeyboardInterrupt')
+                break
             self.stage.move_to_x_y(i,j)
-            intensity,wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
+            self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
             log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
-            if i == x_positions[-1]:
+            self.step += 1
+            if i == x_positions[-1] and j == y_positions[-1]:
                 log.info('FINISHED SCANNING.')
-            intensidad.append(intensity)
-            long_de_onda.append(wavelength)
+        return self.intensity,self.wavelength
 
 
 
