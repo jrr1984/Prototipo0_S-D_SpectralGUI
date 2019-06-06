@@ -10,15 +10,13 @@ log.addHandler(socket_handler)
 syst = StageAndSpec()
 syst.connect()
 initial_time = time.time()
-num_avg=5
-dx = 10
-dy=10
-x_array_scan = np.arange(0.0,dx*(10+1),dx)
-y_array_scan = np.arange(0.0,dy*(10+1),dy)
-thread = threading.Thread(target=syst.scan, args= (dx,x_array_scan,dy,y_array_scan,num_avg))
-thread.start()
+num_avg=1
+x_array_scan = np.arange(0.0,10+1,10)
+y_array_scan = np.arange(0.0,10+1,10)
+BE_thread = threading.Thread(target=syst.scan, args= (x_array_scan,y_array_scan,num_avg))
+BE_thread.start()
 log.info('Thread started')
-steep= syst.step
+keep_step= syst.step
 intensity = []
 wavelength = []
 '''def storage_data():
@@ -26,7 +24,13 @@ wavelength = []
         yield syst.wavelength
         yield syst.intensity
 storage_data()'''
-thread.join()
+def read(thread,q):
+    t = 0
+    while thread.is_set():
+        q.put([syst.intensity, syst.wavelength])
+        time.sleep(0.01)
+    log.info('Done SAVING the data.')
+BE_thread.join()
 log.info('Length of wavelength: {}'.format(len(wavelength)))
 elapsed_time =time.time() - initial_time
 log.info('Time: {}, for num_avg: {}'.format(elapsed_time,num_avg))
