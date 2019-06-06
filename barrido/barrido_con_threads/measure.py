@@ -23,6 +23,7 @@ class XYmove(Procedure, StageAndSpec):
     final_y = FloatParameter('Final x', units='micrometers', default=10)
     dx = FloatParameter('Paso dx', units='micrometers', default=1)
     dy = FloatParameter('Paso dy', units='micrometers', default=1)
+    step = IntegerParameter('Step', default=1)
 
     DATA_COLUMNS = ['Wavelenght [nm]','Intensity [a.u.]']
 
@@ -31,6 +32,15 @@ class XYmove(Procedure, StageAndSpec):
         self.connect()
 
     def execute(self):
+        for x,y in self.meander_scan(x_array_scan,y_array_scan):
+            self.stage.move_to_x_y(x,y)
+            self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
+            log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
+            self.step += 1
+            if self.stop_program:
+                log.info('Stopping measurement - KeyboardInterrupt')
+            break
+        log.info('FINISHED SCANNING.')
         x_array_scan = np.arange(self.initial_x, self.final_x, self.dx)
         y_array_scan = np.arange(self.initial_y, self.final_y, self.dy)
         x_positions,y_positions = self.generate_positions_list(self.dx,x_array_scan,self.dy,y_array_scan)

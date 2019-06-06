@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/barrido" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/barrido_con_threads" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/barrido_sin_threads" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/std" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

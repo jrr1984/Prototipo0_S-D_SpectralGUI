@@ -24,38 +24,15 @@ class StageAndSpec():
         log.info('CCS200/M Spectrometer DISCONNECTED')
         self.stage.close()
 
-    def generate_positions_list(self,dx,x_array_scan,dy,y_array_scan):
-        log.info('ARRANCO EL SCAN')
-        x_positions = []
-        y_positions = []
-        success = False
-        state = 'Init'
-        y = 0.0
-        while success == False:
-            if state == 'Init':
-                for i in x_array_scan:
-                    x_positions.append(i)
-                    y_positions.append(y)
-                y += dy
-                state = 'Reversed x'
-            if state == 'Reversed x':
-                for i in reversed(x_array_scan):
-                    x_positions.append(i)
-                    y_positions.append(y)
-                if y == y_array_scan[-1]:
-                    success = True
-                    break
-                y += dy
-                state = 'Forward x'
-            if state == 'Forward x':
-                for i in x_array_scan:
-                    x_positions.append(i)
-                    y_positions.append(y)
-                if y == y_array_scan[-1]:
-                    success = True
-                y += dy
-                state = 'Reversed x'
-        return x_positions,y_positions
+    def meander_scan(self,x_array_scan, y_array_scan):
+
+        for ndx, y in enumerate(y_array_scan):
+            if ndx % 2:
+                for x in reversed(x_array_scan):
+                    yield x, y
+            else:
+                for x in x_array_scan:
+                    yield x, y
 
     def scan(self,dx,x_array_scan,dy,y_array_scan,num_avg):
         log.info('LISTA POR GENERAR')
