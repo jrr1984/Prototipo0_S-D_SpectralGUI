@@ -10,13 +10,15 @@ log.addHandler(socket_handler)
 
 
 procedure = XYmove()
-procedure.num_avg = 5
+procedure.num_avg = 1
 procedure.initial_x = 0
-procedure.final_x = 110
+procedure.final_x = 2
 procedure.initial_y = 0
-procedure.final_y = 110
-procedure.dx = 10
-procedure.dy = 10
+procedure.final_y = 2
+procedure.dx = 1
+procedure.dy = 1
+#procedure.intensity = []
+#procedure.wavelength = []
 
 import time
 initial_time = time.time()
@@ -24,11 +26,11 @@ data_filename = 'example.txt'
 log.info("Constructing the Results with a data file: %s" % data_filename)
 results = Results(procedure, data_filename)
 
-'''log.info("Constructing the Plotter")
-plotter = Plotter(results)
+log.info("Constructing the Plotter")
+'''plotter = Plotter(results)
 plotter.start()
-log.info("Started the Plotter")'''
-
+log.info("Started the Plotter")
+'''
 log.info("Constructing the Worker")
 worker = Worker(results)
 worker.start()

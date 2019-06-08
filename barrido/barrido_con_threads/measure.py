@@ -3,7 +3,8 @@ import sys
 from logging.handlers import SocketHandler
 import numpy as np
 from StageAndSpecWithReturn import StageAndSpec
-from pymeasure.experiment import Procedure,Results,unique_filename,IntegerParameter, FloatParameter
+from pymeasure.experiment import Procedure
+from pymeasure.experiment.parameters import ListParameter,IntegerParameter, FloatParameter
 import time
 from pymeasure.display.Qt import QtGui
 from pymeasure.display.windows import ManagedWindow
@@ -23,33 +24,24 @@ class XYmove(Procedure, StageAndSpec):
     final_y = FloatParameter('Final x', units='micrometers', default=10)
     dx = FloatParameter('Paso dx', units='micrometers', default=1)
     dy = FloatParameter('Paso dy', units='micrometers', default=1)
-    step = IntegerParameter('Step', default=1)
+    #step = IntegerParameter('Step', default=1)
+    #wavelength = ListParameter('Wavelength [nm]',units='nm')
+    #intensity = ListParameter('Intensity [a.u.]', units='a.u.')
 
-    DATA_COLUMNS = ['Wavelenght [nm]','Intensity [a.u.]']
+    DATA_COLUMNS = ['Wavelength [nm]','Intensity [a.u.]']
 
     def startup(self):
         log.info("CONNECTING to stage and spectrometer.")
         self.connect()
 
     def execute(self):
-        for x,y in self.meander_scan(x_array_scan,y_array_scan):
-            self.stage.move_to_x_y(x,y)
-            self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
-            log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
-            self.step += 1
-            if self.stop_program:
-                log.info('Stopping measurement - KeyboardInterrupt')
-            break
-        log.info('FINISHED SCANNING.')
         x_array_scan = np.arange(self.initial_x, self.final_x, self.dx)
         y_array_scan = np.arange(self.initial_y, self.final_y, self.dy)
         x_positions,y_positions = self.generate_positions_list(self.dx,x_array_scan,self.dy,y_array_scan)
-
-        # Loop through each current point, measure and record the voltage
         for i,j in zip(x_positions,y_positions):
                 self.stage.move_to_x_y(i, j)
                 intensity, wavelength = self.ccs.take_data(integration_time=None, num_avg=self.num_avg, use_background=False)
-                self.emit('results', {'Wavelenght [nm]': wavelength,'Intensity [a.u.]': intensity})
+                self.emit('results', {'Wavelength [nm]': wavelength,'Intensity [a.u.]': intensity})
                 log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
                 if i == x_positions[-1] and j == y_positions[-1]:
                     log.info('FINISHED SCANNING.')
