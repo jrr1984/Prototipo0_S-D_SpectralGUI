@@ -34,7 +34,7 @@ class StageAndSpec():
                 for x in x_array_scan:
                     yield x, y
 
-    def scan(self,dx,x_array_scan,dy,y_array_scan,num_avg):
+    '''def scan(self,dx,x_array_scan,dy,y_array_scan,num_avg):
         log.info('LISTA POR GENERAR')
         x_positions, y_positions = self.generate_positions_list(dx,x_array_scan,dy,y_array_scan)
         log.info('LISTA GENERADA')
@@ -49,7 +49,51 @@ class StageAndSpec():
                 log.info('FINISHED SCANNING.')
             intensidad.append(intensity)
             long_de_onda.append(wavelength)
-        return intensidad,long_de_onda
+        return intensidad,long_de_onda'''
+    def generate_positions_list(self,dx,x_array_scan,dy,y_array_scan):
+        log.info('ARRANCO EL SCAN')
+        x_positions = []
+        y_positions = []
+        success = False
+        state = 'Init'
+        y = 0.0
+        while success == False:
+            if state == 'Init':
+                for i in x_array_scan:
+                    x_positions.append(i)
+                    y_positions.append(y)
+                y += dy
+                state = 'Reversed x'
+            if state == 'Reversed x':
+                for i in reversed(x_array_scan):
+                    x_positions.append(i)
+                    y_positions.append(y)
+                if y == y_array_scan[-1]:
+                    success = True
+                    break
+                y += dy
+                state = 'Forward x'
+            if state == 'Forward x':
+                for i in x_array_scan:
+                    x_positions.append(i)
+                    y_positions.append(y)
+                if y == y_array_scan[-1]:
+                    success = True
+                y += dy
+                state = 'Reversed x'
+        return x_positions,y_positions
+
+    def scan(self,dx,x_array_scan,dy,y_array_scan,num_avg):
+        log.info('LISTA POR GENERAR')
+        x_positions, y_positions = self.generate_positions_list(dx,x_array_scan,dy,y_array_scan)
+        log.info('LISTA GENERADA')
+        log.info('ANTES DEL FOR')
+        for i, j in zip(x_positions, y_positions):
+            self.stage.move_to_x_y(i,j)
+            self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
+            log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
+            if i == x_positions[-1] and j == y_positions[-1]:
+                log.info('FINISHED SCANNING.')
 
 
 
