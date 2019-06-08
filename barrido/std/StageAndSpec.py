@@ -33,37 +33,6 @@ class System():
         log.info('CCS200/M Spectrometer DISCONNECTED')
         self.stage.close()
 
-    def generate_positions_list(self,x_array_scan,y_array_scan):
-        x_positions =[]
-        y_positions = []
-        for ndx, y in enumerate(y_array_scan):
-            if ndx % 2:
-                for x in reversed(x_array_scan):
-                    x_positions.append(x)
-                    y_positions.append(y)
-            else:
-                for x in x_array_scan:
-                    x_positions.append(x)
-                    y_positions.append(y)
-        return x_positions,y_positions
-
-    def scan(self,x_array_scan,y_array_scan,num_avg):
-        log.info('LISTA POR GENERAR')
-        x_positions, y_positions = self.generate_positions_list(x_array_scan,y_array_scan)
-        log.info('LISTA GENERADA')
-        log.info('ANTES DEL FOR')
-        for i, j in zip(x_positions, y_positions):
-            if self.stop_program:
-                log.info('Stopping measurement - KeyboardInterrupt')
-                break
-            self.stage.move_to_x_y(i,j)
-            self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
-            log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
-            self.step += 1
-            if i == x_positions[-1] and j == y_positions[-1]:
-                log.info('FINISHED SCANNING.')
-        #return self.intensity,self.wavelength
-
     def read(self,thread, q):
         while thread.is_alive():
             q.put([self.intensity, self.wavelength])
@@ -101,8 +70,6 @@ class System():
                 inten.append(self.intensity)
                 wavel.append(self.wavelength)
                 i = self.step
-            # yield syst.intensity
-            # yield syst.wavelength
         with open('inten.csv', 'w', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(inten)

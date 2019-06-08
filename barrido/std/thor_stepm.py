@@ -23,10 +23,6 @@ class ThorlabsStageWithStepMotors:
         y=y/1000
         try:
             log.info('Moving to position ({},{})'.format(x,y))
-            self.motorx.load_settings()
-            self.motory.load_settings()
-            self.motorx.set_vel_params(5392 * 100000, 5392 * 100000)
-            self.motory.set_vel_params(5392 * 100000, 5392 * 100000)
             self.motorx.move_to_position(self.motorx.get_device_unit_from_real_value(x,0))
             self.motory.move_to_position(self.motory.get_device_unit_from_real_value(y,0))
             while self.get_x_y_position() != (x,y):
@@ -136,3 +132,7 @@ class ThorlabsStageWithStepMotors:
             while self.get_x_y_position() != (0.0000,0.0000):
                 time.sleep(0.1)
             log.info('Stage of stepper motors CONNECTED')
+        self.motorx.load_settings()
+        self.motory.load_settings()
+        self.motorx.set_vel_params(5392 * 100000, 5392 * 100000)
+        self.motory.set_vel_params(5392 * 100000, 5392 * 100000)

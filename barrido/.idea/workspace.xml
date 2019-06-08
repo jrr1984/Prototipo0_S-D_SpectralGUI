@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/barrido_sin_threads/pruebas_motores.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std/thor_stepm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_con_threads/StageAndSpecWithReturn.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_con_threads/StageAndSpecWithReturn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_con_threads/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_con_threads/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_con_threads/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_con_threads/lextab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_con_threads/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_con_threads/measure.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_con_threads/measure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/barrido_sin_threads/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/barrido_sin_threads/lextab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/StageAndSpec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/inten.csv" beforeDir="false" afterPath="$PROJECT_DIR$/std/inten.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/lextab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pruebitas motores/test_ip.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebitas motores/test_ip.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/thor_stepm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,22 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/std/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="469">
+              <caret line="138" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -56,10 +36,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            <state relative-caret-position="301">
+              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/std/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,9 +130,10 @@
         <option value="$PROJECT_DIR$/barrido_con_threads/tesstss.py" />
         <option value="$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py" />
         <option value="$PROJECT_DIR$/barrido_sin_threads/pruebas_motores.py" />
+        <option value="$PROJECT_DIR$/std/thor_stepm.py" />
+        <option value="$PROJECT_DIR$/std/testqtgraph.py" />
         <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
         <option value="$PROJECT_DIR$/std/main.py" />
-        <option value="$PROJECT_DIR$/std/thor_stepm.py" />
       </list>
     </option>
   </component>
@@ -233,27 +223,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ccs_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pymeas" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido_sin_threads" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido_sin_threads/ccs_tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,6 +265,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testqtgraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pymeas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/testqtgraph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="thor_stepm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,19 +308,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.StageAndSpec" />
-      <item itemvalue="Python.ccs_tests" />
       <item itemvalue="Python.main (1)" />
       <item itemvalue="Python.pruebas_motores" />
+      <item itemvalue="Python.StageAndSpec" />
       <item itemvalue="Python.thor_stepm" />
+      <item itemvalue="Python.testqtgraph" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.thor_stepm" />
         <item itemvalue="Python.StageAndSpec" />
+        <item itemvalue="Python.testqtgraph" />
+        <item itemvalue="Python.thor_stepm" />
         <item itemvalue="Python.pruebas_motores" />
-        <item itemvalue="Python.ccs_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -581,32 +571,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/std/testqtgraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="301">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/std/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="389">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
