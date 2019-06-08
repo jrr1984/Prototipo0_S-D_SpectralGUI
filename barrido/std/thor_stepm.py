@@ -38,8 +38,12 @@ class ThorlabsStageWithStepMotors:
                 time.sleep(0.1)
             log.info('Stage in position ({},{})'.format(x, y))
     def close(self):
+        self.motory.load_settings()
+        self.motorx.load_settings()
         self.motorx.home()
         self.motory.home()
+        self.motory.set_homing_velocity(54890604)
+        self.motory.set_homing_velocity(54890604)
         self.motorx.stop_polling()
         self.motory.stop_polling()
         self.motory.disconnect()
@@ -47,11 +51,15 @@ class ThorlabsStageWithStepMotors:
         log.info('Stage of stepper motors DISCONNECTED')
         
     def get_vel_params(self):
+        self.motorx.load_settings()
+        self.motory.load_settings()
         print(self.motorx.get_vel_params())
         print(self.motory.get_vel_params())
     
     
     def set_vel_params(self,max_vel_x, accel_x,max_vel_y,accel_y):
+        self.motorx.load_settings()
+        self.motory.load_settings()
         self.motorx.set_vel_params(max_vel_x, accel_x)
         self.motory.set_vel_params(max_vel_y, accel_y)
         
@@ -112,16 +120,14 @@ class ThorlabsStageWithStepMotors:
              # start polling at 200 ms
             self.motorx.start_polling(200)
             self.motory.start_polling(200)
-            self.motorx.set_homing_velocity(5392 * 100000)
-            self.motory.set_homing_velocity(5392 * 100000)
+            self.motorx.set_homing_velocity(204890604) #1.9mm/s, sale de get_device_unit_from_real_value(2,1)
+            self.motory.set_homing_velocity(204890604) #1.9mm/s, sale de get_device_unit_from_real_value(2,1)
             self.motorx.home()
             self.motory.home()
             time.sleep(1)
             while self.get_x_y_position() != (0.0000, 0.0000):
                 time.sleep(0.1)
             log.info('Stage of stepper motors CONNECTED')
-            self.motorx.set_vel_params(5392 * 100000, 5392 * 100000)
-            self.motory.set_vel_params(5392 * 100000, 5392 * 100000)
         except:
             log.error('Can-t load settings')
             self.motorx.start_polling(200)
@@ -132,7 +138,7 @@ class ThorlabsStageWithStepMotors:
             while self.get_x_y_position() != (0.0000,0.0000):
                 time.sleep(0.1)
             log.info('Stage of stepper motors CONNECTED')
-        self.motorx.load_settings()
-        self.motory.load_settings()
-        self.motorx.set_vel_params(5392 * 100000, 5392 * 100000)
-        self.motory.set_vel_params(5392 * 100000, 5392 * 100000)
+        self.motorx.set_motor_velocity_limits(3.0,10.0)
+        self.motory.set_motor_velocity_limits(3.0,10.0)
+        self.motorx.set_vel_params(204890604, 110485)#1.9mm/s, 5mm/s^2
+        self.motory.set_vel_params(204890604, 110485)

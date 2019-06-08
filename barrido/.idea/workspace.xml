@@ -7,11 +7,14 @@
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/lextab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/StageAndSpec.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/inten.csv" beforeDir="false" afterPath="$PROJECT_DIR$/std/inten.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/lextab.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/std/thor_stepm.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/thor_stepm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pruebitas motores/2_motores.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebitas motores/2_motores.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pruebitas motores/xystageclass.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../pruebitas motores/xystageclass.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="138" selection-start-line="138" selection-end-line="138" />
+            <state relative-caret-position="233">
+              <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -36,19 +39,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+            <state relative-caret-position="1459">
+              <caret line="84" column="39" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/std/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/std/main.py">
+        <entry file="file://$PROJECT_DIR$/std/pruebita.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+            <state relative-caret-position="271">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#24#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,15 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>move_to_x</find>
-      <find>x-</find>
-      <find>&lt;</find>
-      <find>moving</find>
-      <find>moving to</find>
-      <find>wait</find>
-      <find>format</find>
-      <find>Init</find>
-      <find>ccs</find>
       <find>positio</find>
       <find>appen</find>
       <find>append</find>
@@ -95,6 +101,15 @@
       <find>intensi</find>
       <find>set_vel</find>
       <find>mov</find>
+      <find>set_vel_p</find>
+      <find>veloci</find>
+      <find>velocity</find>
+      <find>get</find>
+      <find>vel</find>
+      <find>homing_ve</find>
+      <find>homing_</find>
+      <find>close</find>
+      <find>homing</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,9 +145,9 @@
         <option value="$PROJECT_DIR$/barrido_con_threads/tesstss.py" />
         <option value="$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py" />
         <option value="$PROJECT_DIR$/barrido_sin_threads/pruebas_motores.py" />
-        <option value="$PROJECT_DIR$/std/thor_stepm.py" />
         <option value="$PROJECT_DIR$/std/testqtgraph.py" />
         <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
+        <option value="$PROJECT_DIR$/std/thor_stepm.py" />
         <option value="$PROJECT_DIR$/std/main.py" />
       </list>
     </option>
@@ -317,9 +332,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.thor_stepm" />
         <item itemvalue="Python.StageAndSpec" />
         <item itemvalue="Python.testqtgraph" />
-        <item itemvalue="Python.thor_stepm" />
         <item itemvalue="Python.pruebas_motores" />
       </list>
     </recent_temporary>
@@ -350,7 +365,7 @@
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21780604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21780604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -487,32 +502,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/std/pruebita.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="27" lean-forward="true" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#24#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/barrido_sin_threads/ccs_tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" selection-end-line="11" selection-end-column="11" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/barrido_sin_threads/thor_stepm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -571,27 +566,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/std/testqtgraph.py">
+    <entry file="file://$PROJECT_DIR$/std/testqtgraph.py" />
+    <entry file="file://$PROJECT_DIR$/barrido_sin_threads/thor_stepm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        <state relative-caret-position="-1613">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
           <folding>
-            <element signature="e#24#62#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        <state relative-caret-position="1459">
+          <caret line="84" column="39" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        <state relative-caret-position="233">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -600,10 +596,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/std/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        <state relative-caret-position="183">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/pruebita.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#24#62#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,7 @@ class System():
     intensity = []
     wavelength = []
     step = 0
-    stop_program = False
+    #stop_program = False
 
 
     def connect(self):
@@ -25,7 +25,7 @@ class System():
         time.sleep(0.1)
         self.stage = ThorlabsStageWithStepMotors()
         self.stage.set_stage()
-        self.stage.set_vel_params(5392 * 100000, 5392 * 100000,5392 * 100000, 5392 * 100000)
+
 
 
     def disconnect(self):
@@ -55,13 +55,27 @@ class System():
             self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
             log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
             self.step += 1
-            if self.stop_program:
+            '''if self.stop_program:
                 log.info('Stopping measurement - KeyboardInterrupt')
-                break
+                break'''
         log.info('FINISHED SCANNING.')
         return self.intensity, self.wavelength
 
     def storage_thread(self,thread):
+        def my_call():
+            i = self.step
+            while thread.is_alive():
+                if i != self.step:
+                    i = self.step
+                    log.info('STEP: {}'.format(i))
+                    yield self.intensity
+        ring = my_call()
+        inten = list(ring)
+        with open('inten.csv', 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(inten)
+
+    def storage_thread_list(self,thread):
         inten = []
         wavel = []
         i = self.step
