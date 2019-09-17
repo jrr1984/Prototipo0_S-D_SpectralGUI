@@ -67,7 +67,7 @@ class System():
             while thread.is_alive():
                 if i != self.step:
                     i = self.step
-                    log.info('STEP: {}'.format(i))
+                    #log.info('STEP: {}'.format(i))
                     yield self.intensity
         ring = my_call()
         inten = list(ring)
@@ -82,7 +82,7 @@ class System():
         while thread.is_alive():
             if i != self.step:
                 inten.append(self.intensity)
-                wavel.append(self.wavelength)
+                #wavel.append(self.wavelength)
                 i = self.step
         with open('inten.csv', 'w', newline='') as f:
             writer = csv.writer(f)

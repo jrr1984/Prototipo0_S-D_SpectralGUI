@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/barrido_sin_threads/plotter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std/analyze.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std/long_de_onda.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/StageAndSpec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/lextab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,33 +23,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
+        <entry file="file://$PROJECT_DIR$/std/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
+            <state relative-caret-position="455">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1459">
-              <caret line="84" column="39" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/std/main.py">
+        <entry file="file://$PROJECT_DIR$/std/analyze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="220">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,7 +57,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>positio</find>
       <find>appen</find>
       <find>append</find>
       <find>long</find>
@@ -73,7 +69,6 @@
       <find>intensid</find>
       <find>running</find>
       <find>name</find>
-      <find>step</find>
       <find>set_st</find>
       <find>disconn</find>
       <find>meander</find>
@@ -90,6 +85,8 @@
       <find>homing_</find>
       <find>close</find>
       <find>homing</find>
+      <find>storage</find>
+      <find>step</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,17 +123,19 @@
         <option value="$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py" />
         <option value="$PROJECT_DIR$/barrido_sin_threads/pruebas_motores.py" />
         <option value="$PROJECT_DIR$/std/testqtgraph.py" />
-        <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
         <option value="$PROJECT_DIR$/std/thor_stepm.py" />
+        <option value="$PROJECT_DIR$/barrido_sin_threads/plotter.py" />
         <option value="$PROJECT_DIR$/std/main.py" />
+        <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
+        <option value="$PROJECT_DIR$/std/analyze.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="30" />
-    <option name="y" value="60" />
-    <option name="width" value="3780" />
-    <option name="height" value="1920" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -196,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.analyze">
     <configuration name="StageAndSpec" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,6 +209,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/StageAndSpec.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="analyze" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pymeas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/analyze.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,7 +259,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pruebas_motores" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="plotter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -251,28 +271,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido_sin_threads/pruebas_motores.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="testqtgraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pymeas" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/testqtgraph.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido_sin_threads/plotter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,19 +302,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python.pruebas_motores" />
       <item itemvalue="Python.StageAndSpec" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.plotter" />
       <item itemvalue="Python.thor_stepm" />
-      <item itemvalue="Python.testqtgraph" />
+      <item itemvalue="Python.analyze" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.thor_stepm" />
+        <item itemvalue="Python.analyze" />
         <item itemvalue="Python.StageAndSpec" />
-        <item itemvalue="Python.testqtgraph" />
-        <item itemvalue="Python.pruebas_motores" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.plotter" />
+        <item itemvalue="Python.thor_stepm" />
       </list>
     </recent_temporary>
   </component>
@@ -342,14 +341,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21780604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21366164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.05319149" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.9468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -512,16 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/pymeas/Lib/site-packages/Instrumental_lib-0.6.dev0-py3.6.egg/instrumental/drivers/spectrometers/thorlabs_ccs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -557,23 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1459">
-          <caret line="84" column="39" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/std/pruebita.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -584,12 +556,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/std/main.py">
+    <entry file="file://$PROJECT_DIR$/std/lextab.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/test.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/barrido_sin_threads/barrido_sin_threads.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="205">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/inten.csv" />
+    <entry file="file://$PROJECT_DIR$/barrido_sin_threads/plotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/long_de_onda.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
