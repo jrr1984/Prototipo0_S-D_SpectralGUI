@@ -14,7 +14,5 @@ inten = pd.read_csv('inten.csv')
 #     figManager.window.showMaximized()
 #     plt.show()
 
-sp1 = [wavel,inten.iloc[0]]
+sp1 = np.array([wavel,inten.iloc[0]])
 print(len(sp1))
-print(np.size(sp1[0]))
-print(np.size(sp1[1]))
