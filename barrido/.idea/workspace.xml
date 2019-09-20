@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab27840-f764-4d0c-bbc0-cf8c4f5ce6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/barrido_sin_threads/plotter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std/analyze.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/std/long_de_onda.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std/colorpy/inten.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std/colorpy/long_de_onda.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/std/colorpy/testjrr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/StageAndSpec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std/lextab.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/lextab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/analyze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="572">
               <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -34,13 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/analyze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="176">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/std/colorpy/testjrr.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#4#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,6 +138,7 @@
         <option value="$PROJECT_DIR$/std/main.py" />
         <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
         <option value="$PROJECT_DIR$/std/analyze.py" />
+        <option value="$PROJECT_DIR$/std/colorpy/testjrr.py" />
       </list>
     </option>
   </component>
@@ -145,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,28 +169,34 @@
               <item name="barrido" type="462c0819:PsiDirectoryNode" />
               <item name="std" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="barrido" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barrido" type="462c0819:PsiDirectoryNode" />
+              <item name="std" type="462c0819:PsiDirectoryNode" />
+              <item name="colorpy" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/std" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/std/colorpy" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\barrido\std\colorpy" />
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\barrido\std" />
+      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\barrido\barrido_con_threads" />
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure" />
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\barrido\std" />
-      <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\barrido\barrido_con_threads" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\pymeasure" />
       <recent name="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\pymeas\barrido" />
     </key>
@@ -195,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.analyze">
+  <component name="RunManager" selected="Python.testjrr">
     <configuration name="StageAndSpec" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -238,7 +256,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="blackbody" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -246,11 +264,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std/colorpy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/colorpy/blackbody.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -259,7 +277,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plotter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_blackbody" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -267,11 +285,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/barrido_sin_threads" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std/colorpy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/barrido_sin_threads/plotter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/colorpy/test_blackbody.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,7 +298,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thor_stepm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="testjrr" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pymeas" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,11 +306,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/std/colorpy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/thor_stepm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/std/colorpy/testjrr.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,18 +321,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.StageAndSpec" />
-      <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python.plotter" />
-      <item itemvalue="Python.thor_stepm" />
       <item itemvalue="Python.analyze" />
+      <item itemvalue="Python.test_blackbody" />
+      <item itemvalue="Python.blackbody" />
+      <item itemvalue="Python.testjrr" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testjrr" />
+        <item itemvalue="Python.blackbody" />
+        <item itemvalue="Python.test_blackbody" />
         <item itemvalue="Python.analyze" />
         <item itemvalue="Python.StageAndSpec" />
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.plotter" />
-        <item itemvalue="Python.thor_stepm" />
       </list>
     </recent_temporary>
   </component>
@@ -329,6 +347,14 @@
       <option name="presentableId" value="Default" />
       <updated>1559161270493</updated>
     </task>
+    <task id="LOCAL-00001" summary="retomandooo">
+      <created>1568754420913</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568754420913</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -348,7 +374,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.05319149" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49920508" weight="0.9468085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39925373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -364,10 +390,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="retomandooo" />
+    <option name="LAST_COMMIT_MESSAGE" value="retomandooo" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pymeasure/thor_stepm.py" />
-    <entry file="file://$PROJECT_DIR$/pymeasure/pymeas_trials.py" />
-    <entry file="file://$PROJECT_DIR$/example.csv" />
     <entry file="file://$PROJECT_DIR$/barrido/lextab.py" />
     <entry file="file://$PROJECT_DIR$/barrido/stage_and_spec_connection.py" />
     <entry file="file://$PROJECT_DIR$/barrido/thor_stepm.py" />
@@ -608,7 +635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/std/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="572">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -616,12 +643,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/std/colorpy/test_blackbody.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/colorpy/blackbody.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/colorpy/inten.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/std/analyze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="176">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/std/colorpy/testjrr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#4#0" expanded="true" />
           </folding>
         </state>
       </provider>
