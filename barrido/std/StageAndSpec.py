@@ -15,7 +15,11 @@ class System():
     intensity = []
     wavelength = []
     step = 0
+<<<<<<< HEAD
     #stop_program = False
+=======
+    stop_program = False
+>>>>>>> 1e383a0fc81b85c7118b87981badb0bf45d62af9
 
 
     def connect(self):
@@ -25,7 +29,11 @@ class System():
         time.sleep(0.1)
         self.stage = ThorlabsStageWithStepMotors()
         self.stage.set_stage()
+<<<<<<< HEAD
 
+=======
+        self.stage.set_vel_params(5392 * 100000, 5392 * 100000,5392 * 100000, 5392 * 100000)
+>>>>>>> 1e383a0fc81b85c7118b87981badb0bf45d62af9
 
 
     def disconnect(self):
@@ -55,13 +63,20 @@ class System():
             self.intensity, self.wavelength = self.ccs.take_data(integration_time=None, num_avg=num_avg, use_background=False)
             log.info('Spectra measured in {}'.format(self.stage.get_x_y_position()))
             self.step += 1
+<<<<<<< HEAD
             '''if self.stop_program:
                 log.info('Stopping measurement - KeyboardInterrupt')
                 break'''
+=======
+            if self.stop_program:
+                log.info('Stopping measurement - KeyboardInterrupt')
+                break
+>>>>>>> 1e383a0fc81b85c7118b87981badb0bf45d62af9
         log.info('FINISHED SCANNING.')
         return self.intensity, self.wavelength
 
     def storage_thread(self,thread):
+<<<<<<< HEAD
         def my_call():
             i = self.step
             while thread.is_alive():
@@ -76,13 +91,19 @@ class System():
             writer.writerows(inten)
 
     def storage_thread_list(self,thread):
+=======
+>>>>>>> 1e383a0fc81b85c7118b87981badb0bf45d62af9
         inten = []
         wavel = []
         i = self.step
         while thread.is_alive():
             if i != self.step:
                 inten.append(self.intensity)
+<<<<<<< HEAD
                 #wavel.append(self.wavelength)
+=======
+                wavel.append(self.wavelength)
+>>>>>>> 1e383a0fc81b85c7118b87981badb0bf45d62af9
                 i = self.step
         with open('inten.csv', 'w', newline='') as f:
             writer = csv.writer(f)
