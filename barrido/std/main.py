@@ -11,10 +11,10 @@ initial_time=time.time()
 syst = System()
 syst.connect()
 num_avg=5
-dx = 500.0 #en micrones, luego son pasados a mm
-dy = 500.0
-x_array_scan = np.arange(0.0,dx*(25+1),dx)
-y_array_scan = np.arange(0.0,dy*(25+1),dy)
+dx = 50.0 #en micrones, luego son pasados a mm
+dy = 50.0
+x_array_scan = np.arange(0.0,dx*(260+1),dx)
+y_array_scan = np.arange(0.0,dy*(260+1),dy)
 BE_thread = threading.Thread(target=syst.scan_meander, args=(x_array_scan,y_array_scan,num_avg))
 BE_thread.start()
 storage_thread = threading.Thread(target = syst.storage_thread, args=(BE_thread,))
@@ -28,3 +28,4 @@ log.info('STORAGE Thread done, it took: {}.'.format(storage_total_time))
 syst.disconnect()
 elapsed_time = time.time() - initial_time
 log.info('TOTAL TIME: {}'.format(elapsed_time))
+
