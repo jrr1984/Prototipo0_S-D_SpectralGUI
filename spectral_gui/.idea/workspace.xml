@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26342071-a78d-4a5c-9336-6f862c52d7d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/spectral_gui.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spectral_gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../barrido/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../barrido/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spectral_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/spectral_gui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spectral_gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="83">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -168,21 +158,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="633" y="0" width="653" height="687" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.048622366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4820144" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4820144" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.053956833" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5377698" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -198,8 +189,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spectral_gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="83">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>

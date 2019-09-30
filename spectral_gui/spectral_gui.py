@@ -28,12 +28,19 @@ class SpectralGui(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
+def gf(strintoprint):
+    print(strintoprint)
+
 class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text = "Start Page", font = LARGE_FONT)
         label.pack(pady=10, padx=10)
+
+        button1 = tk.Button(self, text = "Visit Page 1",
+                            command = lambda: gf("this works"))
+        button1.pack()
 
 
 
