@@ -16,11 +16,13 @@ class SpectralGui(tk.Tk):
 
         self.frames = {} #DICCIONARIO
 
-        frame = StartPage(container,self)
+        for F in (StartPage,PageOne,PageTwo):
 
-        self.frames[StartPage] = frame
+            frame = F(container,self)
 
-        frame.grid(row=0, column=0, sticky="nsew")
+            self.frames[F] = frame
+
+            frame.grid(row=0, column=0, sticky="nsew")
 
         self.show_frame(StartPage)
 
@@ -39,8 +41,45 @@ class StartPage(tk.Frame):
         label.pack(pady=10, padx=10)
 
         button1 = tk.Button(self, text = "Visit Page 1",
-                            command = lambda: gf("this works"))
+                            command = lambda: controller.show_frame(PageOne))
         button1.pack()
+
+        button1 = tk.Button(self, text="Visit Page 2",
+                            command=lambda: controller.show_frame(PageTwo))
+        button1.pack()
+
+
+
+class PageOne(tk.Frame):
+
+    def __init__(self,parent,controller):
+        tk.Frame.__init__(self, parent)
+        label = tk.Label(self, text="Page One", font=LARGE_FONT)
+        label.pack(pady=10, padx=10)
+
+        button = tk.Button(self, text="Back to Home",
+                            command=lambda: controller.show_frame(StartPage))
+        button.pack()
+
+        button2 = tk.Button(self, text="Page Two",
+                            command=lambda: controller.show_frame(PageTwo))
+        button2.pack()
+
+class PageTwo(tk.Frame):
+
+    def __init__(self,parent,controller):
+        tk.Frame.__init__(self, parent)
+        label = tk.Label(self, text="Page Two", font=LARGE_FONT)
+        label.pack(pady=10, padx=10)
+
+        button = tk.Button(self, text="Back to Home",
+                            command=lambda: controller.show_frame(StartPage))
+        button.pack()
+
+        button2 = tk.Button(self, text="Page One",
+                           command=lambda: controller.show_frame(PageOne))
+        button2.pack()
+
 
 
 
