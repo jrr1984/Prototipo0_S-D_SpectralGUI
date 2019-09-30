@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.17)  23 SEP 2019 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.17)  27 SEP 2019 12:29
 entering extended mode
 **./cuaderno_de_lab.tex
 (cuaderno_de_lab.tex
@@ -481,35 +481,93 @@ File: imgs/datasheet_modelo.png Graphic file (type png)
 Package pdftex.def Info: imgs/datasheet_modelo.png  used on input line 71.
 (pdftex.def)             Requested size: 419.56807pt x 309.15543pt.
  [3 <./imgs/green_band_spectra.png> <./imgs/datasheet_modelo.png>]
-<imgs/med23del91.png, id=33, 1387.584pt x 656.2116pt>
-File: imgs/med23del91.png Graphic file (type png)
-<use imgs/med23del91.png>
-Package pdftex.def Info: imgs/med23del91.png  used on input line 91.
-(pdftex.def)             Requested size: 555.02377pt x 262.47998pt.
-
-Overfull \hbox (85.26877pt too wide) in paragraph at lines 91--92
- [] 
+Overfull \hbox (12.96571pt too wide) in paragraph at lines 94--95
+[]\OT1/cmr/m/n/12 Fuente de luz uti-li-za-da: \OT1/cmtt/m/n/12 Fiber-Lite 190 I
+lluminator, 30 watt Halogen light source
  []
 
-[4 <./imgs/med23del91.png>]
+
+Overfull \hbox (49.2489pt too wide) in paragraph at lines 96--97
+[]\OT1/cmtt/m/n/12 datasheet\OT1/cmr/m/n/12 : [][]$\OT1/cmtt/m/n/12 https : / /
+ www . setra . com / hubfs / products / illuminators / model-[]190-[]data-[]she
+et .
+ []
+
+<imgs/setup_barrido/1.jpg, id=35, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/1.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/1.jpg>
+Package pdftex.def Info: imgs/setup_barrido/1.jpg  used on input line 108.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+<imgs/setup_barrido/2.jpg, id=36, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/2.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/2.jpg>
+Package pdftex.def Info: imgs/setup_barrido/2.jpg  used on input line 112.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+[4 <./imgs/setup_barrido/1.jpg>]
+<imgs/setup_barrido/3.jpg, id=42, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/3.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/3.jpg>
+Package pdftex.def Info: imgs/setup_barrido/3.jpg  used on input line 116.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+<imgs/setup_barrido/4.jpg, id=43, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/4.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/4.jpg>
+Package pdftex.def Info: imgs/setup_barrido/4.jpg  used on input line 120.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+ [5 <./imgs/setup_barrido/2.jpg> <./imgs/setup_barrido/3.jpg>]
+<imgs/setup_barrido/5.jpg, id=48, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/5.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/5.jpg>
+Package pdftex.def Info: imgs/setup_barrido/5.jpg  used on input line 124.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+<imgs/setup_barrido/6.jpg, id=49, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/6.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/6.jpg>
+Package pdftex.def Info: imgs/setup_barrido/6.jpg  used on input line 128.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+ [6 <./imgs/setup_barrido/4.jpg> <./imgs/setup_barrido/5.jpg>]
+<imgs/setup_barrido/7.jpg, id=54, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/7.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/7.jpg>
+Package pdftex.def Info: imgs/setup_barrido/7.jpg  used on input line 132.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+<imgs/setup_barrido/8.jpg, id=55, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/8.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/8.jpg>
+Package pdftex.def Info: imgs/setup_barrido/8.jpg  used on input line 136.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+
+[7 <./imgs/setup_barrido/6.jpg> <./imgs/setup_barrido/7.jpg>]
+<imgs/setup_barrido/9.jpg, id=61, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/9.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/9.jpg>
+Package pdftex.def Info: imgs/setup_barrido/9.jpg  used on input line 140.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+<imgs/setup_barrido/10.jpg, id=62, 4143.48pt x 2330.7075pt>
+File: imgs/setup_barrido/10.jpg Graphic file (type jpg)
+<use imgs/setup_barrido/10.jpg>
+Package pdftex.def Info: imgs/setup_barrido/10.jpg  used on input line 144.
+(pdftex.def)             Requested size: 414.37227pt x 233.0844pt.
+ [8 <./imgs/setup_barrido/8.jpg> <./imgs/setup_barrido/9.jpg>] [9 <./imgs/setup
+_barrido/10.jpg>]
 This exam contains 0 questions with 0 parts, 0 subparts, and 0 subsubparts.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
 (cuaderno_de_lab.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
 Package rerunfilecheck Info: File `cuaderno_de_lab.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 7733 strings out of 492895
- 113338 string characters out of 3123735
+ 7785 strings out of 492895
+ 114487 string characters out of 3123735
  231567 words of memory out of 3000000
- 11574 multiletter control sequences out of 15000+200000
+ 11610 multiletter control sequences out of 15000+200000
  9530 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,12n,31p,452b,407s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -522,9 +580,9 @@ cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jua
 nr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 <C:/Users/juanr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmtt12.pfb>
-Output written on cuaderno_de_lab.pdf (4 pages, 705326 bytes).
+Output written on cuaderno_de_lab.pdf (9 pages, 28563274 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
