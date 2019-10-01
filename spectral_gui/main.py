@@ -4,27 +4,19 @@ import matplotlib
 matplotlib.use("TkAgg") #backend
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
-import matplotlib.animation as animation
 from matplotlib import style
 import matplotlib.pyplot as plt
-
-# import urllib
-# import quandl
-import json
-import pandas as pd
 import numpy as np
+import pandas as pd
+from ciexyz import xyz_from_spectrum
+from colormodels import irgb_from_xyz
+
 
 LARGE_FONT = ("Verdana", 12)
 NORM_FONT = ("Verdana", 10)
 SMALL_FONT = ("Verdana", 8)
 
 style.use("ggplot")
-
-f = Figure()
-a = f.add_subplot(111)
-
-# def changeLightSource(toWhat,pn):
-
 
 def popupmsg(msg):
     popup = tk.Tk()
@@ -38,28 +30,10 @@ def popupmsg(msg):
     B1.pack()
     popup.mainloop()
 
-
-def animate(i):
-    print("Hello World")
-    # mydata = quandl.get("EOD/PAM", authtoken="GrWDhLRHX9UVSxW4t1qQ", start_date="1970-01-01", end_date="1970-01-01")
-    # pullData = open("sampleData.txt","r").read()
-    # dataList = pullData.split('\n')
-    # xList = []
-    # yList = []
-    #
-    # for eachline in dataList:
-    #     if len(eachline)>1: #if empty line
-    #         x,y = eachline.split(',')
-    #         xList.append(int(x))
-    #         yList.append((int(y)))
-    #
-    # a.clear()
-    # a.plot(xList,yList)
-
-
 #pretty stuff for plots:
 #para poner la leyenda fuera y arriba del grafico
 # legend(bbox_to_anchor=(0,1.02,1,.102),loc=3, ncol=2, borderaxespad=0)
+
 class SpectralGui(tk.Tk):
 
     def __init__(self,*args,**kwargs):
@@ -80,19 +54,7 @@ class SpectralGui(tk.Tk):
         filemenu.add_command(label = "Exit",command = quit)
         menubar.add_cascade(label = "File", menu = filemenu)
 
-        # dataChoice = tk.Menu(menubar,tearoff=1)
-        # dataChoice.add_command(label = "R-LED",command=lambda: changeLightSource("R-LED", "R-LED"))
-        # dataChoice.add_command(label="G-LED", command=lambda: changeLightSource("G-LED", "G-LED"))
-        # dataChoice.add_command(label="B-LED", command=lambda: changeLightSource("B-LED", "B-LED"))
-        # dataChoice.add_command(label="NIR", command=lambda: changeLightSource("NIR", "NIR"))
-        # dataChoice.add_command(label="Broadband", command=lambda: changeLightSource("Broadband", "Broadband"))
-        # menubar.add_cascade(label="Source", menu=dataChoice)
-
         tk.Tk.config(self,menu = menubar)
-
-
-
-
 
         self.frames = {} #DICCIONARIO
         frame = SpectralPage(container,self)
@@ -112,7 +74,35 @@ class SpectralPage(tk.Frame):
         # label.pack(pady=10, padx=10)
 
         #graph
-        canvas = FigureCanvasTkAgg(f,self)
+        fig, (a0, a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [3, 1]})
+
+        # fig = Figure()
+        # a = fig.add_subplot(111)
+
+        wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
+        inten_file = pd.read_csv('inten_paso_500micrones.csv')
+        wavel_array = wavel_file.iloc[:, 0:].values
+        inten_array = inten_file.iloc[:, 0:].values
+
+        list_of_colors = []
+
+        for row in range(len(inten_array)):
+            spectra = np.column_stack((wavel_array, inten_array[row, :]))
+            xyz_color_vec = xyz_from_spectrum(spectra)
+            # print(np.shape(spectrum))
+            rgb_disp = irgb_from_xyz(xyz_color_vec)
+            list_of_colors.append(rgb_disp)
+
+        rgb_matrix = np.asarray(list_of_colors)
+        Z1 = np.vstack([rgb_matrix[:, 0], rgb_matrix[:, 1], rgb_matrix[:, 2]])
+        a0.imshow(np.dstack(Z1), interpolation='none', aspect='auto', extent=[0.0, 13.0, 0, 13.0])
+        a0.set_ylabel('y [mm]')
+        a0.set_xlabel('x [mm]')
+        a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[0], '*')
+        a1.set_ylabel('Intensity [a.u.]')
+        a1.set_xlabel('Wavelength [nm]')
+        fig.tight_layout()
+        canvas = FigureCanvasTkAgg(fig,self)
         canvas.draw()
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
 
@@ -128,6 +118,5 @@ class SpectralPage(tk.Frame):
 
 
 app = SpectralGui()
-app.geometry("1920x1080")#size of the app
-ani = animation.FuncAnimation(f,animate,interval=5000)
+#app.geometry("1920x1080")#size of the app
 app.mainloop()
