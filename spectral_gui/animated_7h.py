@@ -6,39 +6,39 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.figure import Figure
 import matplotlib.animation as animation
 from matplotlib import style
+import matplotlib.pyplot as plt
 
-import urllib
+# import urllib
+import quandl
 import json
 import pandas as pd
 import numpy as np
 
-
 LARGE_FONT = ("Verdana", 12)
 style.use("ggplot")
-
-f = Figure(figsize=(5,5),dpi=100)
+f = Figure()
 a = f.add_subplot(111)
 
 def animate(i):
-    pullData = open("sampleData.txt","r").read()
-    dataList = pullData.split('\n')
-    xList = []
-    yList = []
-
-    for eachline in dataList:
-        if len(eachline)>1: #if empty line
-            x,y = eachline.split(',')
-            xList.append(int(x))
-            yList.append((int(y)))
-
-    a.clear()
-    a.plot(xList,yList)
-
-
-
+    mydata = quandl.get("EOD/PAM", authtoken="GrWDhLRHX9UVSxW4t1qQ", start_date="1970-01-01", end_date="1970-01-01")
+    # pullData = open("sampleData.txt","r").read()
+    # dataList = pullData.split('\n')
+    # xList = []
+    # yList = []
+    #
+    # for eachline in dataList:
+    #     if len(eachline)>1: #if empty line
+    #         x,y = eachline.split(',')
+    #         xList.append(int(x))
+    #         yList.append((int(y)))
+    #
+    # a.clear()
+    # a.plot(xList,yList)
 
 
-
+#pretty stuff for plots:
+#para poner la leyenda fuera y arriba del grafico
+# legend(bbox_to_anchor=(0,1.02,1,.102),loc=3, ncol=2, borderaxespad=0)
 class SpectralGui(tk.Tk):
 
     def __init__(self,*args,**kwargs):
@@ -89,5 +89,6 @@ class SpectralPage(tk.Frame):
 
 
 app = SpectralGui()
+app.geometry("1920x1080")#size of the app
 ani = animation.FuncAnimation(f,animate,interval=1000)
 app.mainloop()
