@@ -98,11 +98,32 @@ class SpectralPage(tk.Frame):
         a0.imshow(np.dstack(Z1), interpolation='none', aspect='auto', extent=[0.0, 13.0, 0, 13.0])
         a0.set_ylabel('y [mm]')
         a0.set_xlabel('x [mm]')
+
         a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[0], '*')
         a1.set_ylabel('Intensity [a.u.]')
         a1.set_xlabel('Wavelength [nm]')
         fig.tight_layout()
+
+        def motion(event):
+            global ix
+            ix = event.xdata
+            # print(event.inaxes)
+            if a0 == event.inaxes:
+                print("Moving through X-Y plot")
+            # if event.inaxes == 0:
+            #     print("i entered 2nd if")
+            #     if ix is not None:
+            #         print('x = %f' % (ix))
+            #     return
+            else:
+                a1.clear()
+                print('Not there moron')
+                return
+
+
+
         canvas = FigureCanvasTkAgg(fig,self)
+        canvas.callbacks.connect('motion_notify_event', motion)
         canvas.draw()
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
 
