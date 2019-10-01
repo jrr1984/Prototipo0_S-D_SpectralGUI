@@ -41,6 +41,7 @@ class SpectralGui(tk.Tk):
         tk.Tk.__init__(self, *args, **kwargs)
         tk.Tk.wm_title(self,"Spectral GUI")
         tk.Tk.iconbitmap(self,'c:/users/juanr/downloads/logo_lec.ico')
+        tk.Tk.state(self,'zoomed')
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both",expand=True)
@@ -110,11 +111,9 @@ class SpectralPage(tk.Frame):
             # print(event.inaxes)
             if a0 == event.inaxes:
                 print("Moving through X-Y plot")
-            # if event.inaxes == 0:
-            #     print("i entered 2nd if")
-            #     if ix is not None:
-            #         print('x = %f' % (ix))
-            #     return
+                x, y = event.inaxes.transData.inverted().transform((event.x, event.y)) #transforma de coordenadas del Tkinker Canvas a coordenadas del matplotlib plot
+                print("Mouse position: (%s %s)" % (x, y))
+
             else:
                 a1.clear()
                 print('Not there moron')
@@ -123,8 +122,8 @@ class SpectralPage(tk.Frame):
 
 
         canvas = FigureCanvasTkAgg(fig,self)
-        canvas.callbacks.connect('motion_notify_event', motion)
         canvas.draw()
+        canvas.callbacks.connect('motion_notify_event', motion)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
 
         #navigation toolbar
