@@ -9,7 +9,7 @@ from matplotlib import style
 import matplotlib.pyplot as plt
 
 # import urllib
-import quandl
+# import quandl
 import json
 import pandas as pd
 import numpy as np
@@ -20,7 +20,8 @@ f = Figure()
 a = f.add_subplot(111)
 
 def animate(i):
-    mydata = quandl.get("EOD/PAM", authtoken="GrWDhLRHX9UVSxW4t1qQ", start_date="1970-01-01", end_date="1970-01-01")
+    print("Hello World")
+    # mydata = quandl.get("EOD/PAM", authtoken="GrWDhLRHX9UVSxW4t1qQ", start_date="1970-01-01", end_date="1970-01-01")
     # pullData = open("sampleData.txt","r").read()
     # dataList = pullData.split('\n')
     # xList = []
@@ -51,6 +52,20 @@ class SpectralGui(tk.Tk):
         container.pack(side="top", fill="both",expand=True)
         container.grid_rowconfigure(0,weight=1)
         container.grid_columnconfigure(0, weight=1)
+
+        menubar = tk.Menu(container)
+        filemenu = tk.Menu(menubar, tearoff = 0)
+        filemenu.add_command(label = "Save settings",command = lambda: popupmsg("Not supported yet"))
+        filemenu.add_separator() #agrega una barra separadora entre las opciones
+        filemenu.add_command(label = "Exit",command = quit)
+        menubar.add_cascade(label = "File", menu = filemenu)
+
+
+        tk.Tk.config(self,menu = menubar)
+
+
+
+
 
         self.frames = {} #DICCIONARIO
         frame = SpectralPage(container,self)
@@ -90,5 +105,5 @@ class SpectralPage(tk.Frame):
 
 app = SpectralGui()
 app.geometry("1920x1080")#size of the app
-ani = animation.FuncAnimation(f,animate,interval=1000)
+ani = animation.FuncAnimation(f,animate,interval=5000)
 app.mainloop()
