@@ -8,6 +8,11 @@ from matplotlib import style
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from plots import spectrum_subplot
+import line_profiler
+import atexit
+profile = line_profiler.LineProfiler()
+atexit.register(profile.print_stats)
 
 
 LARGE_FONT = ("Verdana", 12)
@@ -15,6 +20,12 @@ NORM_FONT = ("Verdana", 10)
 SMALL_FONT = ("Verdana", 8)
 
 style.use("ggplot")
+
+
+def find_nearest(array, value):
+    array = np.asarray(array)
+    idx = (np.abs(array - value)).argmin()
+    return array[idx]
 
 def popupmsg(msg):
     popup = tk.Tk()
@@ -66,7 +77,7 @@ class SpectralGui(tk.Tk):
         frame.tkraise()
 
 class SpectralPage(tk.Frame):
-
+    @profile
     def __init__(self,parent,controller):
         tk.Frame.__init__(self, parent)
         #label = tk.Label(self, text="Graph Page", font=LARGE_FONT)
@@ -81,6 +92,11 @@ class SpectralPage(tk.Frame):
         wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
         inten_file = pd.read_csv('inten_paso_500micrones.csv')
         RGB_file = pd.read_csv('RGB_colors.csv')
+        xy_pos_file = pd.read_csv('xy_positions.csv')
+
+        wavel_array = wavel_file.iloc[:, 0:].values
+        inten_array = inten_file.iloc[:, 0:].values
+
         R_array = RGB_file.iloc[:, 0].values
         G_array = RGB_file.iloc[:, 1].values
         B_array = RGB_file.iloc[:, 2].values
@@ -94,6 +110,7 @@ class SpectralPage(tk.Frame):
         a1.set_xlabel('Wavelength [nm]')
         fig.tight_layout()
 
+
         def motion(event):
             global ix
             ix = event.xdata
@@ -102,8 +119,25 @@ class SpectralPage(tk.Frame):
                 print("Moving through X-Y plot")
                 x, y = event.inaxes.transData.inverted().transform((event.x, event.y)) #transforma de coordenadas del Tkinker Canvas a coordenadas del matplotlib plot
                 print("Mouse position: (%s %s)" % (x, y))
-                a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[0], '*')
-                canvas.draw()
+                x_lst = find_nearest(xy_pos_file.iloc[:,0],x)
+                y_lst = find_nearest(xy_pos_file.iloc[:, 1], y)
+                print(x_lst,y_lst)
+                mouse_pos = xy_pos_file[(xy_pos_file.iloc[:, 0] == x_lst) & (xy_pos_file.iloc[:, 1] == y_lst)].index.tolist()
+                print(mouse_pos)
+                if len(mouse_pos) == 0:
+                    a1.clear()
+                    a1.set_ylabel('Intensity [a.u.]')
+                    a1.set_xlabel('Wavelength [nm]')
+                    canvas.draw()
+                else:
+                    a1.clear()
+                    a1.set_ylabel('Intensity [a.u.]')
+                    a1.set_xlabel('Wavelength [nm]')
+                    spectrum = np.column_stack((wavel_array,np.transpose(inten_array[mouse_pos,:])))
+                    # np.asarray(wavel_array, inten_file.iloc[mouse_pos,:].transpose())
+                    w,I = spectrum_subplot(spectrum)
+                    a1.plot(w, I, color='k', linewidth=2.0, antialiased=True)
+                    canvas.draw()
 
             else:
                 a1.clear()
@@ -113,12 +147,12 @@ class SpectralPage(tk.Frame):
                 print('Not there moron')
                 return
 
-
-
         canvas = FigureCanvasTkAgg(fig,self)
-        # canvas.draw()
+        canvas.draw()
         canvas.callbacks.connect('motion_notify_event', motion)
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
+
+
 
         #navigation toolbar
         toolbar = NavigationToolbar2Tk(canvas,self)
@@ -130,7 +164,9 @@ class SpectralPage(tk.Frame):
 
 
 
-
 app = SpectralGui()
-#app.geometry("1920x1080")#size of the app
 app.mainloop()
+
+
+
+
