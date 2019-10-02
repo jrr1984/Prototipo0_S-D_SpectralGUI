@@ -90,7 +90,6 @@ class SpectralPage(tk.Frame):
         a0.set_ylabel('y [mm]')
         a0.set_xlabel('x [mm]')
 
-        a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[0], '*')
         a1.set_ylabel('Intensity [a.u.]')
         a1.set_xlabel('Wavelength [nm]')
         fig.tight_layout()
@@ -103,17 +102,22 @@ class SpectralPage(tk.Frame):
                 print("Moving through X-Y plot")
                 x, y = event.inaxes.transData.inverted().transform((event.x, event.y)) #transforma de coordenadas del Tkinker Canvas a coordenadas del matplotlib plot
                 print("Mouse position: (%s %s)" % (x, y))
+                a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[0], '*')
+                canvas.draw()
 
             else:
                 a1.clear()
+                a1.set_ylabel('Intensity [a.u.]')
+                a1.set_xlabel('Wavelength [nm]')
+                canvas.draw()
                 print('Not there moron')
                 return
 
 
 
         canvas = FigureCanvasTkAgg(fig,self)
+        # canvas.draw()
         canvas.callbacks.connect('motion_notify_event', motion)
-        canvas.draw()
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
 
         #navigation toolbar
