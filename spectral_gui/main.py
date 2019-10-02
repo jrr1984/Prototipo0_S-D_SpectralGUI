@@ -8,8 +8,6 @@ from matplotlib import style
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from ciexyz import xyz_from_spectrum
-from colormodels import irgb_from_xyz
 
 
 LARGE_FONT = ("Verdana", 12)
@@ -82,20 +80,12 @@ class SpectralPage(tk.Frame):
 
         wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
         inten_file = pd.read_csv('inten_paso_500micrones.csv')
-        wavel_array = wavel_file.iloc[:, 0:].values
-        inten_array = inten_file.iloc[:, 0:].values
+        RGB_file = pd.read_csv('RGB_colors.csv')
+        R_array = RGB_file.iloc[:, 0].values
+        G_array = RGB_file.iloc[:, 1].values
+        B_array = RGB_file.iloc[:, 2].values
 
-        list_of_colors = []
-
-        for row in range(len(inten_array)):
-            spectra = np.column_stack((wavel_array, inten_array[row, :]))
-            xyz_color_vec = xyz_from_spectrum(spectra)
-            # print(np.shape(spectrum))
-            rgb_disp = irgb_from_xyz(xyz_color_vec)
-            list_of_colors.append(rgb_disp)
-
-        rgb_matrix = np.asarray(list_of_colors)
-        Z1 = np.vstack([rgb_matrix[:, 0], rgb_matrix[:, 1], rgb_matrix[:, 2]])
+        Z1 = np.vstack([R_array, G_array, B_array])
         a0.imshow(np.dstack(Z1), interpolation='none', aspect='auto', extent=[0.0, 13.0, 0, 13.0])
         a0.set_ylabel('y [mm]')
         a0.set_xlabel('x [mm]')
@@ -122,8 +112,8 @@ class SpectralPage(tk.Frame):
 
 
         canvas = FigureCanvasTkAgg(fig,self)
-        canvas.draw()
         canvas.callbacks.connect('motion_notify_event', motion)
+        canvas.draw()
         canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand = True)
 
         #navigation toolbar
