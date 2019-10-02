@@ -4,10 +4,11 @@ import matplotlib
 matplotlib.use("TkAgg") #backend
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib import style
+import matplotlib.colors
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from plots import spectrum_subplot
+from plots import wavelength_to_rgb
 import line_profiler
 import atexit
 profile = line_profiler.LineProfiler()
@@ -95,7 +96,7 @@ class SpectralGui(tk.Tk):
         menubar.add_cascade(label= "Spectra subplot",menu=spectraChoice)
 
         helpmenu = tk.Menu(menubar, tearoff=0)
-        helpmenu.add_command(label= "Contact us", command= lambda: popupmsg("JRR, HG & LEC \n e-mail: juanreto@gmail.com"))
+        helpmenu.add_command(label= "Contact us", command= lambda: popupmsg("      JRR, HG & LEC \n juanreto@gmail.com"))
         menubar.add_cascade(label="Help",menu= helpmenu)
 
 
@@ -162,10 +163,26 @@ class SpectralPage(tk.Frame):
                 if opt == 0:
                     self.a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[mouse_pos, :].transpose(), '*')
                 if opt == 1:
-                    spectrum = np.column_stack((wavel_array,np.transpose(inten_array[mouse_pos,:])))
+                    # spectrum = np.column_stack((wavel_array,np.transpose(inten_array[mouse_pos,:])))
                     # np.asarray(wavel_array, inten_file.iloc[mouse_pos,:].transpose())
-                    w,I = spectrum_subplot(spectrum)
-                    self.a1.plot(w, I, color='k', linewidth=2.0, antialiased=True)
+                    # w,I = spectrum_subplot(spectrum)
+                    clim = (350, 780)
+                    norm = plt.Normalize(*clim)
+                    wl = np.arange(clim[0], clim[1] + 1, 2)
+                    colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
+                    spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
+
+                    wavelengths = wavel_array[:, 0]
+                    spectrum = np.transpose(inten_array[mouse_pos, :])
+                    self.a1.plot(wavel_array, spectrum, color='darkred')
+                    y = np.linspace(0, np.max(spectrum), 100)
+                    X, Y = np.meshgrid(wavelengths, y)
+                    extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
+                    self.a1.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
+
+                    # self.a1.fill_between(wavelengths, spectrum, where= spectrum <=np.max(spectrum), color='w')
+
+                    # self.a1.plot(w, I, color='k', linewidth=2.0, antialiased=True)
                 # self.canvas.draw()
 
         else:
