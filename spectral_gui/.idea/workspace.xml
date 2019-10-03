@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26342071-a78d-4a5c-9336-6f862c52d7d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/exaam.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing_line_profiler.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing_line_profiler.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="185" column="36" lean-forward="true" selection-start-line="185" selection-start-column="36" selection-end-line="185" selection-end-column="36" />
+            <state relative-caret-position="-20">
+              <caret line="208" column="53" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -28,10 +29,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plots.py">
+        <entry file="file://$PROJECT_DIR$/exaam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            <state relative-caret-position="374">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="9" selection-end-line="17" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,6 +66,12 @@
       <find>subplot</find>
       <find>print</find>
       <find>interval</find>
+      <find>a0</find>
+      <find>extent</find>
+      <find>animate</find>
+      <find>ix</find>
+      <find>notify</find>
+      <find>3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,6 +89,7 @@
         <option value="$PROJECT_DIR$/another_ex.py" />
         <option value="$PROJECT_DIR$/main_2.py" />
         <option value="$PROJECT_DIR$/plots.py" />
+        <option value="$PROJECT_DIR$/exaam.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -146,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="blah" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="exaam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spectral_gui" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -158,7 +169,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/blah.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exaam.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,10 +244,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.exaam" />
         <item itemvalue="Python.plots" />
         <item itemvalue="Python.another_ex" />
         <item itemvalue="Python.jhdsfsj" />
-        <item itemvalue="Python.blah" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +282,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43085107" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43085107" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,10 +447,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exaam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="9" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="185" column="36" lean-forward="true" selection-start-line="185" selection-start-column="36" selection-end-line="185" selection-end-column="36" />
+        <state relative-caret-position="-20">
+          <caret line="208" column="53" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
