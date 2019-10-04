@@ -6,7 +6,6 @@ log.setLevel(1)
 socket_handler = SocketHandler('127.0.0.1', 19996)
 log.addHandler(socket_handler)
 import numpy as np
-import time, threading
 initial_time=time.time()
 syst = System()
 syst.connect()

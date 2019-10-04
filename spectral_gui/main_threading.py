@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import matplotlib
+from multiprocessing.pool import ThreadPool
 matplotlib.use("TkAgg") #backend
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib import style
@@ -10,7 +11,7 @@ import numpy as np
 import pandas as pd
 from plots import wavelength_to_rgb
 import line_profiler
-import atexit
+import atexit,time
 profile = line_profiler.LineProfiler()
 atexit.register(profile.print_stats)
 import matplotlib.animation as animation
@@ -33,20 +34,42 @@ SMALL_FONT = ("Verdana", 8)
 
 style.use("ggplot")
 
-wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
+pool = ThreadPool(processes=4)
 
-inten_arriba_df = pd.read_csv('inten-50micr-arriba.csv',header=None)
-inten_abajo_df = pd.read_csv('inten-50micr-abajo.csv',header=None)
+inten_arriba_file = "inten-50micr-arriba.csv"
+inten_abajo_file = "inten-50micr-abajo.csv"
+
+def import_csv(file_name):
+    df_csv = pd.read_csv(file_name,header=None)
+    # print(df_csv.head())
+    return df_csv
+
+# Create two threads as follows
+inten_arriba_df = pool.apply_async(import_csv, (inten_arriba_file, )).get()
+inten_abajo_df = pool.apply_async(import_csv, (inten_abajo_file, )).get()
+
 frames = [inten_abajo_df,inten_arriba_df]
 inten_df = pd.concat(frames)
-end_time = time()
-print(end_time - start_time)
-wavel_array = wavel_df.iloc[:, 0].values
-inten_array = inten_df.iloc[:, 0:].values
-RGB_up_df = pd.read_csv('RGB-colors-50micron-arriba.csv',header=None)
-RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
+
+RGB_up_df = pool.apply_async(import_csv, ('RGB-colors-50micron-arriba.csv', )).get()
+RGB_down_df = pool.apply_async(import_csv, ('RGB-colors-50micron-abajo.csv', )).get()
 RGB_frames = [RGB_down_df,RGB_up_df]
 RGB_df = pd.concat(RGB_frames)
+
+end_time = time()
+
+print(end_time - start_time)
+
+
+
+wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
+# inten_arriba_df = pd.read_csv('inten-50micr-arriba.csv',header=None)
+# inten_abajo_df = pd.read_csv('inten-50micr-abajo.csv',header=None)
+# frames = [inten_abajo_df,inten_arriba_df]
+# inten_df = pd.concat(frames)
+wavel_array = wavel_df.iloc[:, 0].values
+inten_array = inten_df.iloc[:, 0:].values
+
 xy_pos_df = pd.read_csv('xy_positions_FULL50micron.csv',header=None)
 
 R_array = RGB_df.iloc[:,0].values

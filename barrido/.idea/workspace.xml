@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1a69bfc-b11d-4ef3-81fd-56063fb3c2c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../spectral_gui/main_threading.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spectral_gui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spectral_gui/RGB_colors_50micron.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spectral_gui/RGB_colors_50micron_abajo.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../spectral_gui/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/testing_line_profiler.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/testing_line_profiler.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spectral_gui/main_dask.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/main_dask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spectral_gui/premasticating_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/premasticating_data.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/std/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="440">
+              <caret line="29" selection-start-line="16" selection-end-line="29" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -30,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            <state relative-caret-position="1320">
+              <caret line="65" column="25" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="25" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -47,6 +53,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>yield</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -72,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,6 +99,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,6 +205,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18665607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -238,8 +250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/std/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="440">
+          <caret line="29" selection-start-line="16" selection-end-line="29" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -248,8 +260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        <state relative-caret-position="1320">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="25" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

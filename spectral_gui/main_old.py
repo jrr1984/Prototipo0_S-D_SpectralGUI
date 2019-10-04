@@ -1,4 +1,5 @@
 import tkinter as tk
+import dask as dask
 from tkinter import ttk
 import matplotlib
 matplotlib.use("TkAgg") #backend
@@ -14,8 +15,7 @@ import atexit
 profile = line_profiler.LineProfiler()
 atexit.register(profile.print_stats)
 import matplotlib.animation as animation
-from time import time # to measure the time taken to run the code
-start_time = time()
+
 opt = 1
 
 def changeSpectradisp(option):
@@ -33,35 +33,7 @@ SMALL_FONT = ("Verdana", 8)
 
 style.use("ggplot")
 
-wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
-
-inten_arriba_df = pd.read_csv('inten-50micr-arriba.csv',header=None)
-inten_abajo_df = pd.read_csv('inten-50micr-abajo.csv',header=None)
-frames = [inten_abajo_df,inten_arriba_df]
-inten_df = pd.concat(frames)
-end_time = time()
-print(end_time - start_time)
-wavel_array = wavel_df.iloc[:, 0].values
-inten_array = inten_df.iloc[:, 0:].values
-RGB_up_df = pd.read_csv('RGB-colors-50micron-arriba.csv',header=None)
-RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
-RGB_frames = [RGB_down_df,RGB_up_df]
-RGB_df = pd.concat(RGB_frames)
-xy_pos_df = pd.read_csv('xy_positions_FULL50micron.csv',header=None)
-
-R_array = RGB_df.iloc[:,0].values
-G_array = RGB_df.iloc[:,1].values
-B_array = RGB_df.iloc[:,2].values
-R = R_array.reshape(492,260)
-G = G_array.reshape(492,260)
-B = B_array.reshape(492,260)
-img = np.empty((492,260,3), dtype=np.uint8)
-img[:,:,0] = R
-img[:,:,1] = G
-img[:,:,2] = B
-
-
-# wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
+wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
 # inten_file = pd.read_csv('inten_paso_500micrones.csv',header=None)
 # inten_file = pd.read_csv('inten_paso_50micrones_arriba.csv',header=None)
 
@@ -71,25 +43,26 @@ img[:,:,2] = B
 # xy_pos_file = pd.read_csv('xy_positions.csv',header=None)
 
 
-##### BANDA DE ABAJO CON NIR DATASET #########################################################
-# inten_file = pd.read_csv('inten_50micr_abajo_selected.csv',header=None)
-# RGB_file = pd.read_csv('RGB_colors_50micron_abajo.csv',header=None)
-# xy_pos_file = pd.read_csv('xy_positions_50micron_abajo.csv',header=None)
-#
-# wavel_array = wavel_file.iloc[:, 0].values
-# inten_array = inten_file.iloc[221:,:].values
-#
-# R_array = RGB_file.iloc[:,0].values
-# G_array = RGB_file.iloc[:,1].values
-# B_array = RGB_file.iloc[:,2].values
-#
-# R = R_array.reshape(230,260)
-# G = G_array.reshape(230,260)
-# B = B_array.reshape(230,260)
-# img = np.empty((230,260,3), dtype=np.uint8)
-# img[:,:,0] = R
-# img[:,:,1] = G
-# img[:,:,2] = B
+##### NIR DATASET #########################################################
+inten_file = pd.read_csv('inten_50micr_abajo_selected.csv',header=None)
+RGB_file = pd.read_csv('RGB_colors_50micron_abajo.csv',header=None)
+xy_pos_file = pd.read_csv('xy_positions_50micron_abajo.csv',header=None)
+
+wavel_array = wavel_file.iloc[:, 0].values
+inten_array = inten_file.iloc[:, 0:].values
+inten_file1 = inten_file.iloc[221:,:]
+
+R_array = RGB_file.iloc[:,0].values
+G_array = RGB_file.iloc[:,1].values
+B_array = RGB_file.iloc[:,2].values
+
+R = R_array.reshape(230,260)
+G = G_array.reshape(230,260)
+B = B_array.reshape(230,260)
+img = np.empty((230,260,3), dtype=np.uint8)
+img[:,:,0] = R
+img[:,:,1] = G
+img[:,:,2] = B
 #########################################################################
 
 def find_nearest(array, value):
@@ -183,7 +156,7 @@ class SpectralPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
 
-        self.a0.imshow(img,interpolation='none', aspect='auto',origin= 'lower',extent=[0.0, 13000.0, 0, 24500.0])
+        self.a0.imshow(img,interpolation='none', aspect='auto',origin= 'lower',extent=[0.0, 13000.0, 0, 13000.0])
         self.a0.set_ylabel('y [\u03bcm]')
         self.a0.set_xlabel('x [\u03bcm]')
 
@@ -208,19 +181,22 @@ class SpectralPage(tk.Frame):
                 # print("Moving through X-Y plot")
                 # x, y = event.inaxes.transData.inverted().transform((event.x, event.y)) #transforma de coordenadas del Tkinker Canvas a coordenadas del matplotlib plot
                 # print("Mouse position: (%s %s)" % (x, y))
-                x_lst = find_nearest(xy_pos_df.iloc[:,0],x_move)
-                y_lst = find_nearest(xy_pos_df.iloc[:,1], y_move)
+                x_lst = find_nearest(xy_pos_file.iloc[:,0],x_move)
+                y_lst = find_nearest(xy_pos_file.iloc[:,1], y_move)
                 # print(x_lst,y_lst)
-                mouse_pos = xy_pos_df[(xy_pos_df.iloc[:, 0] == x_lst) & (xy_pos_df.iloc[:, 1] == y_lst)].index.tolist()
+                mouse_pos = xy_pos_file[(xy_pos_file.iloc[:, 0] == x_lst) & (xy_pos_file.iloc[:, 1] == y_lst)].index.tolist()
                 # print(mouse_pos)
-                self.a1.clear()
-                self.a1.set_ylabel('Intensity [a.u.]')
-                self.a1.set_xlabel('Wavelength [nm]')
                 if len(mouse_pos) == 0:
-                    pass
+                    self.a1.clear()
+                    self.a1.set_ylabel('Intensity [a.u.]')
+                    self.a1.set_xlabel('Wavelength [nm]')
+                    # self.canvas.draw()
                 else:
+                    self.a1.clear()
+                    self.a1.set_ylabel('Intensity [a.u.]')
+                    self.a1.set_xlabel('Wavelength [nm]')
                     if opt == 0:
-                        self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+                        self.a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[mouse_pos, :].transpose(), '*')
                     if opt == 1:
                         # spectrum = np.column_stack((wavel_array,np.transpose(inten_array[mouse_pos,:])))
                         # np.asarray(wavel_array, inten_file.iloc[mouse_pos,:].transpose())
@@ -258,10 +234,10 @@ class SpectralPage(tk.Frame):
             y_click = event.ydata
             if opt == 2:
                 self.a1.clear()
-                x_lst = find_nearest(xy_pos_df.iloc[:, 0], x_click)
-                y_lst = find_nearest(xy_pos_df.iloc[:, 1], y_click)
-                mouse_pos = xy_pos_df[(xy_pos_df.iloc[:, 0] == x_lst) & (xy_pos_df.iloc[:, 1] == y_lst)].index.tolist()
-                self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+                x_lst = find_nearest(xy_pos_file.iloc[:, 0], x_click)
+                y_lst = find_nearest(xy_pos_file.iloc[:, 1], y_click)
+                mouse_pos = xy_pos_file[(xy_pos_file.iloc[:, 0] == x_lst) & (xy_pos_file.iloc[:, 1] == y_lst)].index.tolist()
+                self.a1.plot(wavel_file.iloc[:, 0], inten_file.iloc[mouse_pos, :].transpose(), '*')
 
     @profile
     def animate(self,interval):
