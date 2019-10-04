@@ -14,18 +14,18 @@ import atexit
 profile = line_profiler.LineProfiler()
 atexit.register(profile.print_stats)
 import matplotlib.animation as animation
-from time import time # to measure the time taken to run the code
-start_time = time()
+
 opt = 1
 
 def changeSpectradisp(option):
     global opt
-    if option == 0:
-        opt = 0
-    if option == 1:
-        opt = 1
-    if option == 2:
-        opt = 2
+    opt = option
+    # if option == 0:
+    #     opt = 0
+    # if option == 1:
+    #     opt = 1
+    # if option == 2:
+    #     opt = 2
 
 LARGE_FONT = ("Verdana", 12)
 NORM_FONT = ("Verdana", 10)
@@ -34,19 +34,16 @@ SMALL_FONT = ("Verdana", 8)
 style.use("ggplot")
 
 wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
+inten_df = pd.read_pickle('inten_fin.pkl')
 
-inten_arriba_df = pd.read_csv('inten-50micr-arriba.csv',header=None)
-inten_abajo_df = pd.read_csv('inten-50micr-abajo.csv',header=None)
-frames = [inten_abajo_df,inten_arriba_df]
-inten_df = pd.concat(frames)
-end_time = time()
-print(end_time - start_time)
 wavel_array = wavel_df.iloc[:, 0].values
 inten_array = inten_df.iloc[:, 0:].values
-RGB_up_df = pd.read_csv('RGB-colors-50micron-arriba.csv',header=None)
-RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
-RGB_frames = [RGB_down_df,RGB_up_df]
-RGB_df = pd.concat(RGB_frames)
+
+RGB_df = pd.read_pickle('RGB_fin.pkl')
+# RGB_up_df = pd.read_csv('RGB-colors-50micron-arriba.csv',header=None)
+# RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
+# RGB_frames = [RGB_down_df,RGB_up_df]
+# RGB_df = pd.concat(RGB_frames)
 xy_pos_df = pd.read_csv('xy_positions_FULL50micron.csv',header=None)
 
 R_array = RGB_df.iloc[:,0].values
@@ -61,36 +58,6 @@ img[:,:,1] = G
 img[:,:,2] = B
 
 
-# wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
-# inten_file = pd.read_csv('inten_paso_500micrones.csv',header=None)
-# inten_file = pd.read_csv('inten_paso_50micrones_arriba.csv',header=None)
-
-# RGB_file = pd.read_csv('RGB_colors.csv',header=None)
-# RGB_file = pd.read_csv('RGB_colors_50micron.csv',header=None)
-
-# xy_pos_file = pd.read_csv('xy_positions.csv',header=None)
-
-
-##### BANDA DE ABAJO CON NIR DATASET #########################################################
-# inten_file = pd.read_csv('inten_50micr_abajo_selected.csv',header=None)
-# RGB_file = pd.read_csv('RGB_colors_50micron_abajo.csv',header=None)
-# xy_pos_file = pd.read_csv('xy_positions_50micron_abajo.csv',header=None)
-#
-# wavel_array = wavel_file.iloc[:, 0].values
-# inten_array = inten_file.iloc[221:,:].values
-#
-# R_array = RGB_file.iloc[:,0].values
-# G_array = RGB_file.iloc[:,1].values
-# B_array = RGB_file.iloc[:,2].values
-#
-# R = R_array.reshape(230,260)
-# G = G_array.reshape(230,260)
-# B = B_array.reshape(230,260)
-# img = np.empty((230,260,3), dtype=np.uint8)
-# img[:,:,0] = R
-# img[:,:,1] = G
-# img[:,:,2] = B
-#########################################################################
 
 def find_nearest(array, value):
     array = np.asarray(array)
@@ -147,7 +114,7 @@ class SpectralGui(tk.Tk):
         menubar.add_cascade(label= "Spectra subplot",menu=spectraChoice)
 
         dataSetMenu = tk.Menu(menubar, tearoff=0)
-        dataSetMenu.add_command(label="Quartz-Tungsten", command=lambda: popupmsg("Not supported yet."))
+        dataSetMenu.add_command(label="Quartz-Tungsten", command=lambda: changeSpectradisp(3))
         dataSetMenu.add_separator()
         dataSetMenu.add_command(label="NIR Source", command=lambda: popupmsg("Not supported yet."))
         dataSetMenu.add_separator()
@@ -245,7 +212,6 @@ class SpectralPage(tk.Frame):
                         plt.ylabel('Intensity [a.u.]')
 
                         plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
-
             else:
                 self.a1.clear()
                 self.a1.set_ylabel('Intensity [a.u.]')

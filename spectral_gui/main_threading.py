@@ -15,18 +15,19 @@ import atexit,time
 profile = line_profiler.LineProfiler()
 atexit.register(profile.print_stats)
 import matplotlib.animation as animation
-from time import time # to measure the time taken to run the code
-start_time = time()
+# from time import time # to measure the time taken to run the code
+# start_time = time()
 opt = 1
 
 def changeSpectradisp(option):
     global opt
-    if option == 0:
-        opt = 0
-    if option == 1:
-        opt = 1
-    if option == 2:
-        opt = 2
+    opt = option
+    # if option == 0:
+    #     opt = 0
+    # if option == 1:
+    #     opt = 1
+    # if option == 2:
+    #     opt = 2
 
 LARGE_FONT = ("Verdana", 12)
 NORM_FONT = ("Verdana", 10)
@@ -56,11 +57,13 @@ RGB_down_df = pool.apply_async(import_csv, ('RGB-colors-50micron-abajo.csv', )).
 RGB_frames = [RGB_down_df,RGB_up_df]
 RGB_df = pd.concat(RGB_frames)
 
-end_time = time()
+# end_time = time()
 
-print(end_time - start_time)
+# print(end_time - start_time)
 
-
+light_df = pd.read_csv("source_spectrum_med_power.csv")
+light_df = light_df['[Data]'].str.split(';', expand=True)
+light_array = light_df.iloc[:,1].values
 
 wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
 # inten_arriba_df = pd.read_csv('inten-50micr-arriba.csv',header=None)
@@ -83,37 +86,6 @@ img[:,:,0] = R
 img[:,:,1] = G
 img[:,:,2] = B
 
-
-# wavel_file = pd.read_csv('long_de_onda_1_tira.csv')
-# inten_file = pd.read_csv('inten_paso_500micrones.csv',header=None)
-# inten_file = pd.read_csv('inten_paso_50micrones_arriba.csv',header=None)
-
-# RGB_file = pd.read_csv('RGB_colors.csv',header=None)
-# RGB_file = pd.read_csv('RGB_colors_50micron.csv',header=None)
-
-# xy_pos_file = pd.read_csv('xy_positions.csv',header=None)
-
-
-##### BANDA DE ABAJO CON NIR DATASET #########################################################
-# inten_file = pd.read_csv('inten_50micr_abajo_selected.csv',header=None)
-# RGB_file = pd.read_csv('RGB_colors_50micron_abajo.csv',header=None)
-# xy_pos_file = pd.read_csv('xy_positions_50micron_abajo.csv',header=None)
-#
-# wavel_array = wavel_file.iloc[:, 0].values
-# inten_array = inten_file.iloc[221:,:].values
-#
-# R_array = RGB_file.iloc[:,0].values
-# G_array = RGB_file.iloc[:,1].values
-# B_array = RGB_file.iloc[:,2].values
-#
-# R = R_array.reshape(230,260)
-# G = G_array.reshape(230,260)
-# B = B_array.reshape(230,260)
-# img = np.empty((230,260,3), dtype=np.uint8)
-# img[:,:,0] = R
-# img[:,:,1] = G
-# img[:,:,2] = B
-#########################################################################
 
 def find_nearest(array, value):
     array = np.asarray(array)
@@ -204,14 +176,31 @@ class SpectralPage(tk.Frame):
     @profile
     def __init__(self,parent,controller):
         tk.Frame.__init__(self, parent)
-        self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
+        if opt != 3:
+            self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
 
-        self.a0.imshow(img,interpolation='none', aspect='auto',origin= 'lower',extent=[0.0, 13000.0, 0, 24500.0])
-        self.a0.set_ylabel('y [\u03bcm]')
-        self.a0.set_xlabel('x [\u03bcm]')
+            self.a0.imshow(img,interpolation='none', aspect='auto',origin= 'lower',extent=[0.0, 13000.0, 0, 24500.0])
+            self.a0.set_ylabel('y [\u03bcm]')
+            self.a0.set_xlabel('x [\u03bcm]')
 
-        self.a1.set_ylabel('Intensity [a.u.]')
-        self.a1.set_xlabel('Wavelength [nm]')
+            self.a1.set_ylabel('Intensity [a.u.]')
+            self.a1.set_xlabel('Wavelength [nm]')
+
+        if opt == 3:
+            self.fig, (self.a0, self.a1,self.a2) = plt.subplots(3, 1)
+
+            self.a0.plot(wavel_df.iloc[:, 0], light_array[:,1],'*')
+            self.a0.set_ylabel('Intensity [a.u.]')
+            self.a0.set_xlabel('Wavelength [nm]')
+
+            self.a1.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
+            self.a1.set_ylabel('y [\u03bcm]')
+            self.a1.set_xlabel('x [\u03bcm]')
+
+            self.a2.set_ylabel('Intensity [a.u.]')
+            self.a2.set_xlabel('Wavelength [nm]')
+
+
         self.fig.tight_layout()
         self.canvas = FigureCanvasTkAgg(self.fig, self)
         self.canvas.draw()
@@ -225,7 +214,7 @@ class SpectralPage(tk.Frame):
     def motion(self,event):
         x_move = event.xdata
         y_move = event.ydata
-        if opt == 0 or opt == 1:
+        if opt !=2:
 
             if self.a0 == event.inaxes:
                 # print("Moving through X-Y plot")
@@ -268,6 +257,27 @@ class SpectralPage(tk.Frame):
                         plt.ylabel('Intensity [a.u.]')
 
                         plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
+                    # if opt == 3:
+                    #     clim = (350, 780)
+                    #     norm = plt.Normalize(*clim)
+                    #     wl = np.arange(clim[0], clim[1] + 1, 2)
+                    #     colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
+                    #     spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
+                    #     mouse_pos = mouse_pos[0]
+                    #     wavelengths = wavel_array  # wavel_array[:, 0]
+                    #     spectrum = np.transpose(inten_array[mouse_pos, :])
+                    #     plt.plot(wavel_array, spectrum, color='darkred')
+                    #
+                    #     y = np.linspace(0, np.max(spectrum), 100)
+                    #     X, Y = np.meshgrid(wavelengths, y)
+                    #
+                    #     extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
+                    #
+                    #     plt.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
+                    #     plt.xlabel('Wavelength [nm]')
+                    #     plt.ylabel('Intensity [a.u.]')
+                    #
+                    #     plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
 
             else:
                 self.a1.clear()

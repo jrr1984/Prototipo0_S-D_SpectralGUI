@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26342071-a78d-4a5c-9336-6f862c52d7d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_threading.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../barrido/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../barrido/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../barrido/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../barrido/std/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RGB_colors_50micron.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RGB_colors_50micron_abajo.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_dask.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_dask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/premasticating_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/premasticating_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_threading.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_threading.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,23 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main_threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="220">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -56,11 +37,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pack</find>
-      <find>iloc</find>
-      <find>zoom</find>
-      <find>xrange</find>
-      <find>subplot</find>
       <find>interval</find>
       <find>a0</find>
       <find>animate</find>
@@ -86,6 +62,11 @@
       <find>extent</find>
       <find>wavel_arr</find>
       <find>ico</find>
+      <find>changeSpec</find>
+      <find>opt</find>
+      <find>chan</find>
+      <find>sour</find>
+      <find>opt=2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,8 +87,8 @@
         <option value="$PROJECT_DIR$/exaam.py" />
         <option value="$PROJECT_DIR$/new_csv_from_another.py" />
         <option value="$PROJECT_DIR$/main_dask.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/main_threading.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -152,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_threading">
+  <component name="RunManager" selected="Python.main">
     <configuration name="exaam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spectral_gui" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,8 +241,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main_threading" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main_threading" />
         <item itemvalue="Python.new_csv_from_another" />
         <item itemvalue="Python.exaam" />
         <item itemvalue="Python.plots" />
@@ -292,13 +273,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.032565527" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.031771246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.9468085" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.05319149" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,20 +472,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/main_threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="703">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_threading.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="220">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
