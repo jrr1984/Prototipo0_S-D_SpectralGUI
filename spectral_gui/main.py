@@ -33,7 +33,7 @@ SMALL_FONT = ("Verdana", 8)
 
 style.use("ggplot")
 
-wavel_df = pd.read_csv('long_de_onda_1_tira.csv')
+wavel_df = pd.read_pickle('wavel_df.pkl')
 inten_df = pd.read_pickle('inten_fin.pkl')
 
 wavel_array = wavel_df.iloc[:, 0].values
@@ -44,7 +44,7 @@ RGB_df = pd.read_pickle('RGB_fin.pkl')
 # RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
 # RGB_frames = [RGB_down_df,RGB_up_df]
 # RGB_df = pd.concat(RGB_frames)
-xy_pos_df = pd.read_csv('xy_positions_FULL50micron.csv',header=None)
+xy_pos_df = pd.read_pickle('xy_pos_df.pkl')
 
 R_array = RGB_df.iloc[:,0].values
 G_array = RGB_df.iloc[:,1].values
