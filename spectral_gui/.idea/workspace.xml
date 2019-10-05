@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26342071-a78d-4a5c-9336-6f862c52d7d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jkdfha.py" beforeDir="false" afterPath="$PROJECT_DIR$/jkdfha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pickleization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/pickleization.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source_spectrum_med_power.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="359">
+              <caret line="263" column="26" lean-forward="true" selection-start-line="150" selection-end-line="263" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jkdfha.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -37,28 +52,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>animate</find>
-      <find>ix</find>
-      <find>notify</find>
-      <find>3</find>
-      <find>13</find>
-      <find>xy</find>
-      <find>extens</find>
-      <find>:</find>
-      <find>imshow</find>
-      <find>wavel_array</find>
-      <find>find</find>
-      <find>global</find>
-      <find>x</find>
-      <find>inten_arr</find>
-      <find>print</find>
-      <find>xy?</find>
       <find>xy_pos</find>
       <find>inten</find>
       <find>spectrum</find>
       <find>clear</find>
       <find>extent</find>
-      <find>wavel_arr</find>
       <find>ico</find>
       <find>changeSpec</find>
       <find>opt</find>
@@ -67,6 +65,23 @@
       <find>opt=2</find>
       <find>pic</find>
       <find>wavel_df.pkl</find>
+      <find>@pro</find>
+      <find>inten_arr</find>
+      <find>wavel_arr</find>
+      <find>arra</find>
+      <find>inten_array</find>
+      <find>array</find>
+      <find>value</find>
+      <find>separa</find>
+      <find>set_data</find>
+      <find>animate</find>
+      <find>update</find>
+      <find>blit</find>
+      <find>draw</find>
+      <find>Func</find>
+      <find>animation</find>
+      <find>anima</find>
+      <find>curva</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,6 +104,7 @@
         <option value="$PROJECT_DIR$/main_dask.py" />
         <option value="$PROJECT_DIR$/main_threading.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/jkdfha.py" />
       </list>
     </option>
   </component>
@@ -147,6 +163,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exaam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jkdfha" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spectral_gui" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jkdfha.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -218,34 +255,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="plots" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spectral_gui" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.jkdfha" />
         <item itemvalue="Python.main_threading" />
         <item itemvalue="Python.new_csv_from_another" />
         <item itemvalue="Python.exaam" />
-        <item itemvalue="Python.plots" />
       </list>
     </recent_temporary>
   </component>
@@ -273,13 +289,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.031771246" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.023828436" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31205675" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4680851" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -287,7 +304,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.5283688" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3280142" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.6294326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -473,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
+        <state relative-caret-position="-3771">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
@@ -483,8 +500,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        <state relative-caret-position="359">
+          <caret line="263" column="26" lean-forward="true" selection-start-line="150" selection-end-line="263" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jkdfha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import matplotlib
-matplotlib.use("TkAgg") #backend
+matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib import style
 import matplotlib.colors
@@ -20,12 +20,6 @@ opt = 1
 def changeSpectradisp(option):
     global opt
     opt = option
-    # if option == 0:
-    #     opt = 0
-    # if option == 1:
-    #     opt = 1
-    # if option == 2:
-    #     opt = 2
 
 LARGE_FONT = ("Verdana", 12)
 NORM_FONT = ("Verdana", 10)
@@ -35,15 +29,11 @@ style.use("ggplot")
 
 wavel_df = pd.read_pickle('wavel_df.pkl')
 inten_df = pd.read_pickle('inten_fin.pkl')
+light_df = pd.read_pickle('light_df.pkl')
 
 wavel_array = wavel_df.iloc[:, 0].values
-inten_array = inten_df.iloc[:, 0:].values
 
 RGB_df = pd.read_pickle('RGB_fin.pkl')
-# RGB_up_df = pd.read_csv('RGB-colors-50micron-arriba.csv',header=None)
-# RGB_down_df = pd.read_csv('RGB-colors-50micron-abajo.csv',header=None)
-# RGB_frames = [RGB_down_df,RGB_up_df]
-# RGB_df = pd.concat(RGB_frames)
 xy_pos_df = pd.read_pickle('xy_pos_df.pkl')
 
 R_array = RGB_df.iloc[:,0].values
@@ -56,7 +46,6 @@ img = np.empty((492,260,3), dtype=np.uint8)
 img[:,:,0] = R
 img[:,:,1] = G
 img[:,:,2] = B
-
 
 
 def find_nearest(array, value):
@@ -74,6 +63,13 @@ def popupmsg(msg):
     B1 = ttk.Button(popup,text = "Ok", command = leavemini )
     B1.pack()
     popup.mainloop()
+
+normalization = False
+
+def norm(booleanish):
+    global normalization
+    normalization = booleanish
+    return normalization
 
 #pretty stuff for plots:
 #para poner la leyenda fuera y arriba del grafico
@@ -101,20 +97,28 @@ class SpectralGui(tk.Tk):
         menubar.add_cascade(label = "File", menu = filemenu)
 
         spectraChoice = tk.Menu(menubar,tearoff=0)
+
         spectraChoice.add_command(label="Fast&Simple Spectra",
                                   command= lambda: changeSpectradisp(0))
-                                  # command= lambda: popupmsg("Fast&Simple Spectra"))
         spectraChoice.add_separator()
         spectraChoice.add_command(label="Fancy Spectra",
                                   command=lambda: changeSpectradisp(1))
-                                  # command=lambda: popupmsg("Fancy Spectra"))
         spectraChoice.add_separator()
         spectraChoice.add_command(label="Click On Demand",
                                   command=lambda: changeSpectradisp(2))
+        spectraChoice.add_separator()
         menubar.add_cascade(label= "Spectra subplot",menu=spectraChoice)
 
+        fastAndSimpChoice = tk.Menu(spectraChoice, tearoff=0)
+        fastAndSimpChoice.add_command(label="Normalized",
+                                      command=lambda: norm(True))
+        fastAndSimpChoice.add_separator()
+        fastAndSimpChoice.add_command(label="Not Normalized",
+                                      command=lambda: norm(False))
+        spectraChoice.add_cascade(label="Choose Spectra", menu=fastAndSimpChoice)
+
         dataSetMenu = tk.Menu(menubar, tearoff=0)
-        dataSetMenu.add_command(label="Quartz-Tungsten", command=lambda: changeSpectradisp(3))
+        dataSetMenu.add_command(label="Quartz-Tungsten", command=lambda: popupmsg("Not supported yet."))
         dataSetMenu.add_separator()
         dataSetMenu.add_command(label="NIR Source", command=lambda: popupmsg("Not supported yet."))
         dataSetMenu.add_separator()
@@ -145,7 +149,7 @@ class SpectralGui(tk.Tk):
         frame.tkraise()
 
 class SpectralPage(tk.Frame):
-    @profile
+    # @profile
     def __init__(self,parent,controller):
         tk.Frame.__init__(self, parent)
         self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
@@ -172,52 +176,71 @@ class SpectralPage(tk.Frame):
         if opt == 0 or opt == 1:
 
             if self.a0 == event.inaxes:
-                # print("Moving through X-Y plot")
-                # x, y = event.inaxes.transData.inverted().transform((event.x, event.y)) #transforma de coordenadas del Tkinker Canvas a coordenadas del matplotlib plot
-                # print("Mouse position: (%s %s)" % (x, y))
                 x_lst = find_nearest(xy_pos_df.iloc[:,0],x_move)
                 y_lst = find_nearest(xy_pos_df.iloc[:,1], y_move)
-                # print(x_lst,y_lst)
                 mouse_pos = xy_pos_df[(xy_pos_df.iloc[:, 0] == x_lst) & (xy_pos_df.iloc[:, 1] == y_lst)].index.tolist()
-                # print(mouse_pos)
                 self.a1.clear()
                 self.a1.set_ylabel('Intensity [a.u.]')
                 self.a1.set_xlabel('Wavelength [nm]')
                 if len(mouse_pos) == 0:
                     pass
                 else:
-                    if opt == 0:
-                        self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
-                    if opt == 1:
-                        # spectrum = np.column_stack((wavel_array,np.transpose(inten_array[mouse_pos,:])))
-                        # np.asarray(wavel_array, inten_file.iloc[mouse_pos,:].transpose())
-                        # w,I = spectrum_subplot(spectrum)
-                        clim = (350, 780)
-                        norm = plt.Normalize(*clim)
-                        wl = np.arange(clim[0], clim[1] + 1, 2)
-                        colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
-                        spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
-                        mouse_pos = mouse_pos[0]
-                        wavelengths = wavel_array #wavel_array[:, 0]
-                        spectrum = np.transpose(inten_array[mouse_pos, :])
-                        plt.plot(wavel_array, spectrum, color='darkred')
+                    if normalization == True:
+                        inten_norm = (inten_df.iloc[mouse_pos, :]/light_df.iloc[:]).abs()
+                        if opt == 0:
+                            self.a1.plot(wavel_df.iloc[:, 0], inten_norm.transpose(), '*')
+                        if opt == 1:
+                            clim = (350, 780)
+                            norm = plt.Normalize(*clim)
+                            wl = np.arange(clim[0], clim[1] + 1, 2)
+                            colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
+                            spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
+                            mouse_pos = mouse_pos[0]
+                            wavelengths = wavel_array #wavel_array[:, 0]
+                            spectrum = np.transpose(inten_norm)
+                            plt.plot(wavel_array, spectrum, color='darkred')
 
-                        y = np.linspace(0, np.max(spectrum), 100)
-                        X, Y = np.meshgrid(wavelengths, y)
+                            y = np.linspace(0, np.max(spectrum), 100)
+                            X, Y = np.meshgrid(wavelengths, y)
 
-                        extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
+                            extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
 
-                        plt.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
-                        plt.xlabel('Wavelength [nm]')
-                        plt.ylabel('Intensity [a.u.]')
+                            plt.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
+                            plt.xlabel('Wavelength [nm]')
+                            plt.ylabel('Intensity [a.u.]')
 
-                        plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
+                            plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
+                    if normalization == False:
+                        if opt == 0:
+                            self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+                        if opt == 1:
+                            clim = (350, 780)
+                            norm = plt.Normalize(*clim)
+                            wl = np.arange(clim[0], clim[1] + 1, 2)
+                            colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
+                            spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
+                            mouse_pos = mouse_pos[0]
+                            wavelengths = wavel_array  # wavel_array[:, 0]
+                            spectrum = np.transpose(inten_df.iloc[mouse_pos, :])
+                            plt.plot(wavel_array, spectrum, color='darkred')
+
+                            y = np.linspace(0, np.max(spectrum), 100)
+                            X, Y = np.meshgrid(wavelengths, y)
+
+                            extent = (np.min(wavelengths), np.max(wavelengths), np.min(y), np.max(y))
+
+                            plt.imshow(X, clim=clim, extent=extent, cmap=spectralmap, aspect='auto')
+                            plt.xlabel('Wavelength [nm]')
+                            plt.ylabel('Intensity [a.u.]')
+
+                            plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
+
             else:
                 self.a1.clear()
                 self.a1.set_ylabel('Intensity [a.u.]')
                 self.a1.set_xlabel('Wavelength [nm]')
                 return
-
+    @profile
     def on_click(self, event):
         if self.a0 == event.inaxes:
             x_click = event.xdata
@@ -227,7 +250,12 @@ class SpectralPage(tk.Frame):
                 x_lst = find_nearest(xy_pos_df.iloc[:, 0], x_click)
                 y_lst = find_nearest(xy_pos_df.iloc[:, 1], y_click)
                 mouse_pos = xy_pos_df[(xy_pos_df.iloc[:, 0] == x_lst) & (xy_pos_df.iloc[:, 1] == y_lst)].index.tolist()
-                self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+                if normalization == False:
+                    self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+                if normalization == True:
+                    inten_norm = (inten_df.iloc[mouse_pos, :] / light_df.iloc[:]).abs()
+                    self.a1.plot(wavel_df.iloc[:, 0], inten_norm.transpose(), '*')
+
 
     @profile
     def animate(self,interval):
