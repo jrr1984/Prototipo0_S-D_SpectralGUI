@@ -30,23 +30,12 @@ style.use("ggplot")
 wavel_df = pd.read_pickle('wavel_df.pkl')
 inten_df = pd.read_pickle('inten_fin.pkl')
 light_df = pd.read_pickle('light_df.pkl')
+RGB_pkl_df = pd.read_pickle('RGB_fin.pkl')
+RGB_mean_df = pd.read_pickle('bandas-mean.pkl')
 
 wavel_array = wavel_df.iloc[:, 0].values
 
-RGB_df = pd.read_pickle('RGB_fin.pkl')
 xy_pos_df = pd.read_pickle('xy_pos_df.pkl')
-
-R_array = RGB_df.iloc[:,0].values
-G_array = RGB_df.iloc[:,1].values
-B_array = RGB_df.iloc[:,2].values
-R = R_array.reshape(492,260)
-G = G_array.reshape(492,260)
-B = B_array.reshape(492,260)
-img = np.empty((492,260,3), dtype=np.uint8)
-img[:,:,0] = R
-img[:,:,1] = G
-img[:,:,2] = B
-
 
 def find_nearest(array, value):
     array = np.asarray(array)
@@ -58,6 +47,7 @@ def popupmsg(msg):
     def leavemini():
         popup.destroy()
     popup.wm_title("!")
+
     label = ttk.Label(popup,text=msg,font = NORM_FONT)
     label.pack(side="top",fill="x",pady=10)
     B1 = ttk.Button(popup,text = "Ok", command = leavemini )
@@ -70,6 +60,16 @@ def norm(booleanish):
     global normalization
     normalization = booleanish
     return normalization
+
+im_change = False
+im_option = 0
+
+def imshow_choice(booleanish,opt):
+    global im_change
+    global im_option
+    im_option = opt
+    im_change = booleanish
+    return im_change,im_option
 
 #pretty stuff for plots:
 #para poner la leyenda fuera y arriba del grafico
@@ -129,6 +129,16 @@ class SpectralGui(tk.Tk):
         dataSetMenu.add_command(label="B LED", command=lambda: popupmsg("Not supported yet."))
         menubar.add_cascade(label="Light Source Datasets", menu=dataSetMenu)
 
+
+        imshowChoice = tk.Menu(menubar,tearoff=0)
+
+        imshowChoice.add_command(label="RGB",
+                                  command= lambda: imshow_choice(True,0))
+        imshowChoice.add_separator()
+        imshowChoice.add_command(label="DELTA Spectra",
+                                  command=lambda: imshow_choice(True,1))
+        menubar.add_cascade(label= "Imshow Options",menu=imshowChoice)
+
         helpmenu = tk.Menu(menubar, tearoff=0)
         helpmenu.add_command(label="Contact us", command=lambda: popupmsg("      JRR, HG & LEC \n juanreto@gmail.com"))
         menubar.add_cascade(label="Help", menu=helpmenu)
@@ -153,8 +163,22 @@ class SpectralPage(tk.Frame):
     def __init__(self,parent,controller):
         tk.Frame.__init__(self, parent)
         self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
+        if not im_option:
+            RGB_df = RGB_pkl_df
+        else:
+            RGB_df = RGB_mean_df
 
-        self.a0.imshow(img,interpolation='none', aspect='auto',origin= 'lower',extent=[0.0, 13000.0, 0, 24500.0])
+        R_array = RGB_df.iloc[:, 0].values
+        G_array = RGB_df.iloc[:, 1].values
+        B_array = RGB_df.iloc[:, 2].values
+        R = R_array.reshape(492, 260)
+        G = G_array.reshape(492, 260)
+        B = B_array.reshape(492, 260)
+        img = np.empty((492, 260, 3), dtype=np.uint8)
+        img[:, :, 0] = R
+        img[:, :, 1] = G
+        img[:, :, 2] = B
+        self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
         self.a0.set_ylabel('y [\u03bcm]')
         self.a0.set_xlabel('x [\u03bcm]')
 
@@ -169,7 +193,7 @@ class SpectralPage(tk.Frame):
         self.canvas._tkcanvas.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
         self.ani = animation.FuncAnimation(self.fig,self.animate,interval=100)
 
-    @profile
+    # @profile
     def motion(self,event):
         x_move = event.xdata
         y_move = event.ydata
@@ -185,11 +209,14 @@ class SpectralPage(tk.Frame):
                 if len(mouse_pos) == 0:
                     pass
                 else:
-                    if normalization == True:
-                        inten_norm = (inten_df.iloc[mouse_pos, :]/light_df.iloc[:]).abs()
+                    if normalization:
+                        tmp = 1/light_df.iloc[:]
+                        tmp[light_df.iloc[:]<0.1] = 0
+                        inten_norm = (inten_df.iloc[mouse_pos, :] * tmp).abs()
+                        # print(inten_norm)
                         if opt == 0:
                             self.a1.plot(wavel_df.iloc[:, 0], inten_norm.transpose(), '*')
-                        if opt == 1:
+                        elif opt == 1:
                             clim = (350, 780)
                             norm = plt.Normalize(*clim)
                             wl = np.arange(clim[0], clim[1] + 1, 2)
@@ -198,8 +225,9 @@ class SpectralPage(tk.Frame):
                             mouse_pos = mouse_pos[0]
                             wavelengths = wavel_array #wavel_array[:, 0]
                             spectrum = np.transpose(inten_norm)
-                            plt.plot(wavel_array, spectrum, color='darkred')
-
+                            # print(spectrum)
+                            self.a1.plot(wavel_array, spectrum, color='darkred')
+                            # print(np.max(spectrum))
                             y = np.linspace(0, np.max(spectrum), 100)
                             X, Y = np.meshgrid(wavelengths, y)
 
@@ -209,11 +237,12 @@ class SpectralPage(tk.Frame):
                             plt.xlabel('Wavelength [nm]')
                             plt.ylabel('Intensity [a.u.]')
 
-                            plt.fill_between(wavelengths, spectrum, np.max(spectrum), color='w')
-                    if normalization == False:
+                            plt.fill_between(wavelengths, spectrum ,np.max(spectrum), color='w')
+
+                    if not normalization:
                         if opt == 0:
                             self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
-                        if opt == 1:
+                        elif opt == 1:
                             clim = (350, 780)
                             norm = plt.Normalize(*clim)
                             wl = np.arange(clim[0], clim[1] + 1, 2)
@@ -222,8 +251,7 @@ class SpectralPage(tk.Frame):
                             mouse_pos = mouse_pos[0]
                             wavelengths = wavel_array  # wavel_array[:, 0]
                             spectrum = np.transpose(inten_df.iloc[mouse_pos, :])
-                            plt.plot(wavel_array, spectrum, color='darkred')
-
+                            self.a1.plot(wavel_array, spectrum, color='darkred')
                             y = np.linspace(0, np.max(spectrum), 100)
                             X, Y = np.meshgrid(wavelengths, y)
 
@@ -240,7 +268,7 @@ class SpectralPage(tk.Frame):
                 self.a1.set_ylabel('Intensity [a.u.]')
                 self.a1.set_xlabel('Wavelength [nm]')
                 return
-    @profile
+    # @profile
     def on_click(self, event):
         if self.a0 == event.inaxes:
             x_click = event.xdata
@@ -250,17 +278,44 @@ class SpectralPage(tk.Frame):
                 x_lst = find_nearest(xy_pos_df.iloc[:, 0], x_click)
                 y_lst = find_nearest(xy_pos_df.iloc[:, 1], y_click)
                 mouse_pos = xy_pos_df[(xy_pos_df.iloc[:, 0] == x_lst) & (xy_pos_df.iloc[:, 1] == y_lst)].index.tolist()
-                if normalization == False:
-                    self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
-                if normalization == True:
-                    inten_norm = (inten_df.iloc[mouse_pos, :] / light_df.iloc[:]).abs()
+
+                if normalization:
+                    tmp = 1 / light_df.iloc[:]
+                    tmp[light_df.iloc[:] < 0.1] = 0
+                    inten_norm = (inten_df.iloc[mouse_pos, :] * tmp).abs()
                     self.a1.plot(wavel_df.iloc[:, 0], inten_norm.transpose(), '*')
+                else:
+                    self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
+
+    @profile
+    def imshow_call(self,im_option):
+        global im_change
+        im_change = False
+        if not im_option:
+            RGB_df = RGB_pkl_df
+        else:
+            RGB_df = RGB_mean_df
+        R_array = RGB_df.iloc[:, 0].values
+        G_array = RGB_df.iloc[:, 1].values
+        B_array = RGB_df.iloc[:, 2].values
+        R = R_array.reshape(492, 260)
+        G = G_array.reshape(492, 260)
+        B = B_array.reshape(492, 260)
+        img = np.empty((492, 260, 3), dtype=np.uint8)
+        img[:, :, 0] = R
+        img[:, :, 1] = G
+        img[:, :, 2] = B
+        self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
 
 
     @profile
     def animate(self,interval):
-        self.canvas.callbacks.connect('motion_notify_event',self.motion)
-        self.canvas.mpl_connect('button_press_event', self.on_click)
+        if opt != 2:
+            self.canvas.callbacks.connect('motion_notify_event',self.motion)
+        if opt == 2:
+            self.canvas.mpl_connect('button_press_event', self.on_click)
+        if im_change:
+            self.imshow_call(im_option)
         self.canvas.draw()
 
 

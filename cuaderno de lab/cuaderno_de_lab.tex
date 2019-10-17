@@ -144,8 +144,109 @@ Algunas fotos del setup del barrido:
 	\includegraphics[scale=0.1]{imgs/setup_barrido/10.jpg}
 \end{center}
 
- 
+\hrulefill
 
+$2-8/10/2019$
+
+
+ GUI - RGB.. zoom en las R-NIR bands.
+\begin{center}
+	\includegraphics[scale=0.25]{imgs/gui/gui2.png}
+\end{center}
+
+
+\newpage
+$RGB(x,y)_{band} - RGB^{mean}_{band}$:
+\begin{center}
+	\includegraphics[scale=0.2]{imgs/gui/gui1.png}
+\end{center}
+
+obs: tiempos de integración/exposición distintos para la fuente y para el barrido filtro.
+
+
+
+\hrulefill
+
+$9/10/2019$
+
+2D Motorized Stage incoming...
+
+
+Some useful links:
+
+\begin{itemize}
+	\item \url{https://www.instructables.com/id/Motorized-Microscope-Stage-for-Olympus-IX50/}
+	\item \url{https://www.sciencedirect.com/science/article/pii/S095656631631106X}
+		\item \url{https://reader.elsevier.com/reader/sd/pii/S095656631631106X?token=CD853FD8472ADE524471296014E6F0B954A92E27109FDAE3938642B1E14D24881141960DA2FD9ABFE568803AC8D6CFE6}
+\item \url{http://www.optics-focus.com/motorized-xy-microscope-stage-p-541.html#.XZ5TkEZKg2w}
+	\item \url{https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=5360&pn=MLS203-1}	
+	\item \url{https://www.instructables.com/id/Internet-Arduino-Controlled-T-Slot-XY-Table/}
+	\item \url{https://www.instructables.com/id/Low-cost-digital-microscope-with-automated-slide-m/}
+\end{itemize}
+
+
+Paper fundamental a seguir:
+\href{https://reader.elsevier.com/reader/sd/pii/S095656631631106X?token=D9588CB30F54FB09F8EA5C89EB096F16036AD47E209DD10BCB3138EE9C6500AE62D6D0902D2BB257A30B763BE6C51B37}{LINK}
+
+
+Presupuesto/Lista de ''materiales'':
+
+\begin{enumerate}
+	\item 16 piezas impresora 3D.
+	\item Arduino \begin{itemize}
+	
+	\item Arduino Due $\xrightarrow{}$ \href{https://candy-ho.com/producto/arduino-due-r3-cable-usb-atsam3x8e-arm-cortex-m3-512-kb/}{$\sim$ \$1400}
+	
+	\item Arduino UNO $\xrightarrow{}$ \href{https://candy-ho.com/producto/arduino-uno-r3-cable-usb-domotica-robotica-atmel-original/}{$\sim$ \$750} 	
+	\end{itemize}
+	\item 2 motores paso a paso NEMA 17 - Modelo MKP42HT47-1684A $\xrightarrow{}$ \href{https://candy-ho.com/producto/motor-nema-17-alto-torque-0-9-4-4kg-impresora-3d-prusa-i3/}{$\sim$ \$1700 x 2} $\xrightarrow{}$ VER I (CURRENT) DEMAND -- FUENTE ATX? 
+	
+	En 3D insumos están \$200 más caros: \href{https://3dinsumos.com.ar/Producto/3DPrinter-Nema17-AltoTorque0.9}{LINK}
+
+\item Varilla roscada de diámetro 8 mm de X HILOS (IMPORTANTE, determina el paso): que la varilla venga/comprar con la camisa + tuerca
+\begin{itemize}
+\item  $\sim$ \href{https://candy-ho.com/producto/varilla-rosca-husillo-ctornillo-prusa-reprap-8mm-400mm/}{\$800 x 2 en CANDY-HO} (aparente' no es de 4 hilos, es de 1 hilo entonces avanza 1mm por cada 'firulete', con 4 hilos avanza mucho más rápido (paso + grande: con 1 vuelta de 4 hilos, se avanzan 8 mm))
+\item $\sim$ \href{https://3dinsumos.com.ar/Producto/3D-VarillaRoscadaM8}{\$ 200 x 2 en 3D INSUMOS} 
+\end{itemize}
+
+\item Acoples flexibles de 5mm (diametro del eje del nema 17 (\texttt{shaft diameter})) a 8mm (diámetro de la varilla roscada) x 2 $\xrightarrow{}$ $\sim$ \href{https://3dinsumos.com.ar/Producto/3DPrinter-AcopleAlu5-8}{\$ 150 x 2 en 3D INSUMOS}
+\item 4 Ejes de acero de 8mm de diámetro, x mm de largo $\xrightarrow{}$ \href{https://3dinsumos.com.ar/Producto/3DPrinter-Varilla8mmX320mm}{\$ 300 x 4 ( 2 para cada DoF)}
+\item 4 rodamientos que van sobre los ejes de acero $\xrightarrow{}$ \href{https://3dinsumos.com.ar/Producto/3DPrinter-Rul-SCS8UU-ConSoporte}{\$ 450 x 4 ( 1 para cada eje)}
+\item \texttt{ball bearings} (rulemanes, ó rodamientos, hay en 3D INSUMOS)
+\item \texttt{four M4 brass guide rods.}
+\item 4 end switches - 2 para x - 2 para y
+\item \texttt{65 standard M2-4 screws and
+nuts.}
+	\item Controlador: \begin{itemize}
+\item Puente H L293DNE en un shield montado arriba del arduino UNO.
+\item 	Driver LV8729 hasta 1/128 micropasos 1.5A Max $\xrightarrow{}$ \href{https://3dinsumos.com.ar/Producto/3DPrinter-DriverLV8729}{$\sim$ \$800 x 2}
+	\end{itemize}
+\end{enumerate}
+
+\newpage
+
+\hrulefill
+
+$15/10/2019$
+
+
+Eje x:
+
+\begin{center}
+	\includegraphics[scale=0.8]{imgs/eje_x.png}
+\end{center}
+
+\hrulefill
+
+$17/10/2019$
+
+\begin{center}
+	\includegraphics[scale=0.3]{imgs/gui/chi_sq.png}
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=1.0]{imgs/gui/chunk_sq.png}
+\end{center}
 
 
 \end{document}

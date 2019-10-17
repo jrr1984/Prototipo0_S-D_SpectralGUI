@@ -163,7 +163,7 @@ class SpectralPage(tk.Frame):
         self.a1.set_xlabel('Wavelength [nm]')
         self.fig.tight_layout()
         self.canvas = FigureCanvasTkAgg(self.fig, self)
-        self.canvas.draw()
+        # self.canvas.draw()
         self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=True)
         toolbar = NavigationToolbar2Tk(self.canvas, self)
         toolbar.update()
@@ -172,10 +172,7 @@ class SpectralPage(tk.Frame):
         def init():
             self.curva.set_data([], [])
             return self.curva,
-        self.ani = animation.FuncAnimation(self.fig,self.animate,init_func=init,interval=100)
-        self.canvas.draw()
-
-
+        self.ani = animation.FuncAnimation(self.fig,self.animate,init_func=init,interval=100,blit=False)
 
     @profile
     def motion(self,event):
@@ -225,7 +222,6 @@ class SpectralPage(tk.Frame):
                     if normalization == False:
                         if opt == 0:
                             self.curva.set_data(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose())
-                            return self.curva,
                             # self.a1.plot(wavel_df.iloc[:, 0], inten_df.iloc[mouse_pos, :].transpose(), '*')
                         if opt == 1:
                             clim = (350, 780)
@@ -238,6 +234,7 @@ class SpectralPage(tk.Frame):
                             spectrum = np.transpose(inten_df.iloc[mouse_pos, :])
                             # plt.plot(wavel_array, spectrum, color='darkred')
                             self.curva.set_data(wavel_array, spectrum)
+
 
                             y = np.linspace(0, np.max(spectrum), 100)
                             X, Y = np.meshgrid(wavelengths, y)
@@ -284,8 +281,8 @@ class SpectralPage(tk.Frame):
             self.canvas.callbacks.connect('motion_notify_event',self.motion)
         if opt == 2:
             self.canvas.mpl_connect('button_press_event', self.on_click)
-        self.canvas.draw()
-
+        # self.canvas.draw()
+        return self.canvas,
 
 
 
