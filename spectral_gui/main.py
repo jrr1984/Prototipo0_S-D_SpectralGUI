@@ -31,7 +31,7 @@ wavel_df = pd.read_pickle('wavel_df.pkl')
 inten_df = pd.read_pickle('inten_fin.pkl')
 light_df = pd.read_pickle('light_df.pkl')
 RGB_pkl_df = pd.read_pickle('RGB_fin.pkl')
-RGB_mean_df = pd.read_pickle('bandas-mean.pkl')
+RGB_mean_df = pd.read_pickle('chibandas.pkl')
 
 wavel_array = wavel_df.iloc[:, 0].values
 
@@ -62,7 +62,7 @@ def norm(booleanish):
     return normalization
 
 im_change = False
-im_option = 0
+im_option = 1
 
 def imshow_choice(booleanish,opt):
     global im_change
@@ -165,20 +165,27 @@ class SpectralPage(tk.Frame):
         self.fig, (self.a0, self.a1) = plt.subplots(2, 1, gridspec_kw={'height_ratios': [2.5, 1]})
         if not im_option:
             RGB_df = RGB_pkl_df
+            R_array = RGB_df.iloc[:, 0].values
+            G_array = RGB_df.iloc[:, 1].values
+            B_array = RGB_df.iloc[:, 2].values
+            R = R_array.reshape(492, 260)
+            G = G_array.reshape(492, 260)
+            B = B_array.reshape(492, 260)
+            img = np.empty((492, 260, 3), dtype=np.uint8)
+            img[:, :, 0] = R
+            img[:, :, 1] = G
+            img[:, :, 2] = B
+            self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
         else:
             RGB_df = RGB_mean_df
+            chi_array = RGB_df.iloc[:].values
+            chi_sq = chi_array.reshape(492, 260)
+            clim = (0,.5)
+            self.a0.imshow(chi_sq,clim = clim, interpolation='none', aspect='auto', origin='lower',
+                            extent=[0.0, 13000.0, 0, 24500.0])
 
-        R_array = RGB_df.iloc[:, 0].values
-        G_array = RGB_df.iloc[:, 1].values
-        B_array = RGB_df.iloc[:, 2].values
-        R = R_array.reshape(492, 260)
-        G = G_array.reshape(492, 260)
-        B = B_array.reshape(492, 260)
-        img = np.empty((492, 260, 3), dtype=np.uint8)
-        img[:, :, 0] = R
-        img[:, :, 1] = G
-        img[:, :, 2] = B
-        self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
+
+
         self.a0.set_ylabel('y [\u03bcm]')
         self.a0.set_xlabel('x [\u03bcm]')
 
@@ -293,19 +300,25 @@ class SpectralPage(tk.Frame):
         im_change = False
         if not im_option:
             RGB_df = RGB_pkl_df
+            R_array = RGB_df.iloc[:, 0].values
+            G_array = RGB_df.iloc[:, 1].values
+            B_array = RGB_df.iloc[:, 2].values
+            R = R_array.reshape(492, 260)
+            G = G_array.reshape(492, 260)
+            B = B_array.reshape(492, 260)
+            img = np.empty((492, 260, 3), dtype=np.uint8)
+            img[:, :, 0] = R
+            img[:, :, 1] = G
+            img[:, :, 2] = B
+            self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
+
         else:
             RGB_df = RGB_mean_df
-        R_array = RGB_df.iloc[:, 0].values
-        G_array = RGB_df.iloc[:, 1].values
-        B_array = RGB_df.iloc[:, 2].values
-        R = R_array.reshape(492, 260)
-        G = G_array.reshape(492, 260)
-        B = B_array.reshape(492, 260)
-        img = np.empty((492, 260, 3), dtype=np.uint8)
-        img[:, :, 0] = R
-        img[:, :, 1] = G
-        img[:, :, 2] = B
-        self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
+            chi_array = RGB_df.iloc[:].values
+            chi_sq = chi_array.reshape(492, 260)
+            clim = (0,.5)
+            self.a0.imshow(chi_sq, clim =clim,interpolation='none', aspect='auto', origin='lower',
+                                extent=[0.0, 13000.0, 0, 24500.0])
 
 
     @profile

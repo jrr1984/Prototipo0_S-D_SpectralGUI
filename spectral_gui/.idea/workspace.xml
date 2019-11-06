@@ -9,11 +9,9 @@
       <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/band chi square.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/band chi square.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jhdsfsj.py" beforeDir="false" afterPath="$PROJECT_DIR$/jhdsfsj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jkdfha.py" beforeDir="false" afterPath="$PROJECT_DIR$/jkdfha.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/intensity bands-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/intensity bands-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intensity bands.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/intensity bands.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/premasticating_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/premasticating_data.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="182" column="41" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="182" selection-end-column="41" />
+            <state relative-caret-position="418">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -46,11 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>separa</find>
-      <find>set_data</find>
-      <find>animate</find>
-      <find>update</find>
-      <find>blit</find>
       <find>draw</find>
       <find>Func</find>
       <find>animation</find>
@@ -66,7 +59,6 @@
       <find>changeSpec</find>
       <find>im_choice</find>
       <find>im_change</find>
-      <find>imshow_choice</find>
       <find>im_option</find>
       <find>option</find>
       <find>global</find>
@@ -76,6 +68,12 @@
       <find>print</find>
       <find>inten_norm</find>
       <find>shape</find>
+      <find>RGB_mean_df</find>
+      <find>chi</find>
+      <find>imshow_choice</find>
+      <find>RGB_mean</find>
+      <find>bar</find>
+      <find>clim</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,7 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,11 +123,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/envs/xystage" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -506,8 +505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="182" column="41" lean-forward="true" selection-start-line="170" selection-start-column="8" selection-end-line="182" selection-end-column="41" />
+        <state relative-caret-position="418">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

@@ -248,5 +248,175 @@ $17/10/2019$
 	\includegraphics[scale=1.0]{imgs/gui/chunk_sq.png}
 \end{center}
 
+\begin{itemize}
+	\item Rodamiento lineal para LM8UU \url{https://www.thingiverse.com/thing:1769943}
+	
+	
+	\item Camisa para tornillo ACME paso 2mm \url{https://www.thingiverse.com/thing:2288390}
+	\item Linear Double Screw Rail (2040) \url{https://www.thingiverse.com/thing:2829587}
+	
+	\item 	\url{https://www.instructables.com/id/3D-Printer-Cantilever/}
+	\item \url{https://www.instructables.com/id/Linear-Screw-Double-Rail/}
+\end{itemize}
+
+\begin{center}
+	\includegraphics[scale=1.0]{imgs/3d_xy/agarre_slider.png}
+\end{center}
+
+\hrulefill
+
+$21/10/2019$
+
+
+\begin{center}
+	\includegraphics[scale=1.0]{imgs/3d_xy/enganche.png}
+\end{center}
+
+
+\begin{center}
+	\includegraphics[scale=1.0]{imgs/3d_xy/enganche2.png}
+\end{center}
+
+
+\hrulefill
+
+$22/10/2019$
+
+Agujeros muy pegados!
+
+\begin{center}
+	\includegraphics[scale=0.5]{imgs/3d_xy/agujeros_problem_2040mount.png}
+\end{center}
+
+cambio de posición de los lugares de los agujeros para las T's
+
+se podrán ajustar?
+
+\begin{center}
+	\includegraphics[scale=0.5]{imgs/3d_xy/agujeros_beta.png}
+\end{center}
+
+
+
+\begin{center}
+	\includegraphics[scale=0.5]{imgs/3d_xy/fit_arriba.png}
+\end{center}
+
+
+\hrulefill
+
+
+
+\textsc{Consultas Fede:}
+
+\begin{enumerate}
+	\item  Instante exacto en que los dos ejes se enganchan: 'click' $\xrightarrow{}$  \href{https://youtu.be/mks6Ju9jcFo?t=892}{Link}
+	\item El enganche de los dos ejes, es 'por fuera' no?: $\xrightarrow{}$\href{https://youtu.be/mks6Ju9jcFo?t=1483}{Link}
+	\item Se te ocurre xq hay una dif de altura entre los dos extremos en la parte slider\_part (para perfiles de 1 pulgada x 1 pulgada) PERO no hay tal diferencia de altura para el 2040? (descuido del diseño nomás? ya que no le agrega los semicilindros que parecen claves para el 'clicl'/enganche)
+	
+	\item Los semicilindros van en los surcos de los perfiles? $\xrightarrow{}$  \href{https://cdn.instructables.com/FQR/M932/JH0TJHRY/FQRM932JH0TJHRY.LARGE.jpg?auto=webp&width=1024&fit=bounds}{Link}
+	\item \href{https://cdn.instructables.com/FVR/OPPF/JGQTDJ1N/FVROPPFJGQTDJ1N.LARGE.jpg?auto=webp&width=1024&fit=bounds}{Link}
+\end{enumerate}
+
+
+
+\hrulefill
+
+$26/10/2019$
+
+
+\url{https://www.youtube.com/watch?v=NhebpRfLqFA}
+
+\url{https://www.youtube.com/watch?v=jIZxsY3oUlk}
+
+\url{https://www.youtube.com/watch?v=umWgCpT1eIA}
+
+\url{https://www.youtube.com/watch?v=HqNNfz5rJiE}
+
+Acá está lo que decías de las correas!! (tenías razón!): \url{https://www.youtube.com/watch?v=Gg9hBF6sPW0}
+
+
+End stop (limit switch): \url{https://www.youtube.com/watch?v=1Fh3dUUq-yE&t=8s}
+
+
+
+\hrulefill
+
+$31/10/2019$
+
+ya se compró todo para 1 eje, ver 'inventario\_compras.xsl'
+
+pieza del taller para mañana viernes, hoy electrónica
+
+plan - control:
+
+1) control nema 17 con arduino 1ero..
+
+2) driver lantz
+
+
+driver a4988, pegar el disipador
+
+con unas pinzas levantar papel del disipador y colocarlo sobre el integrado del módulo, parece que se toca todo pero no, no pasa nada, chequeado con lupa.
+
+
+
+\hrulefill
+
+$1/11/2019$
+
+V\_ref ajustado tal que I\_max es 1.68A
+
+prueba con 'cubo' sin rodamientos LM6UU
+
+Sobre como codear los home switchs con accelstepper library: \url{https://www.youtube.com/watch?v=YsLykxnHApg}
+
+
+
+
+
+\hrulefill
+
+$5/11/2019$
+
+Disipador del A4988 se 'sobrecalienta', voy a reajustar el $V_{REF}$ del driver que estaba puesto con una corriente máx de 1.7 A cuando en el setup actual, está consumiendo menos de 1A.
+
+De acuerdo al datasheet $\xrightarrow{}$ \href{https://www.pololu.com/file/0J450/a4988_DMOS_microstepping_driver_with_translator.pdf}{Link}
+
+La cuentita es:
+
+\begin{equation}
+V_{REF} = I_{MAX} . 8 . R_{S}
+\end{equation}
+
+con $R_{S} = 0.1 \Omega$
+
+\begin{equation}
+V_{REF} = 1.1 A * 8 * 0.1 \Omega 
+\end{equation}
+
+
+\begin{equation}
+V_{REF} = 0.88 V 
+\end{equation}
+
+
+Y, como voy a usar microstepping, nos quedamos con este valor de V$_{REF}$.
+
+
+Quizas conviene pegar cambiazo al DRV8225 (o algo asi)
+
+Lista de la próxima compra:
+
+\begin{enumerate}
+	\item Tuerca antibackslash para paso 2mm en lugar de la tuerca común que compré.
+	\item Tornillos M3 cabeza hexagonal, LARGO = 10 mm (no tenían en casa GATA, preguntar antes).
+	\item 1 Varilla de acero sin roscar para 'ejes' de 6mm de diámetro, de largo 1m.
+	\item 1 acople
+	\item NEMA 17 paso $0.9^{\circ}$ tal cual como el que compré en 3D insumos pero comprarlo en CANDY-HO (esta vez no hay apuro y sale \$400 p más barato).	
+	\item Driver DRV8225 X 2 (para reemplazar al A4988 que va bien pero el DRV8225 se banca un mayor consumo de corriente, tiene el mismo tamaño, mismo pinout, etc).
+	\item SHIELD para dos de estos drivers si es posible.
+\end{enumerate}
+
 
 \end{document}
