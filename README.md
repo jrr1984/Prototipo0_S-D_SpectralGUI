@@ -12,4 +12,4 @@ Repositorio de loss programas utilizados en el Prototipo preliminar, de la secci
 7. [Análisis cuantitativo de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/Defects%20analysis.ipynb)
 8. [Población de defectos en general](https://github.com/jrr1984/defects_analysis/blob/master/general_defects_population.ipynb)
 
-[Dependencias del repositorio](https://github.com/jrr1984/defects_analysis/blob/master/dependencias.txt)
+[Dependencias del repositorio](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/dependencias.txt)
