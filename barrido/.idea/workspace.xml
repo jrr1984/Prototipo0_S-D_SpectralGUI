@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1a69bfc-b11d-4ef3-81fd-56063fb3c2c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../spectral_gui/main_threading.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/std/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/std/StageAndSpec.py" beforeDir="false" afterPath="$PROJECT_DIR$/std/StageAndSpec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spectral_gui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/RGB_colors_50micron.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/RGB_colors_50micron_abajo.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/main_dask.py" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/main_dask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spectral_gui/premasticating_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../spectral_gui/premasticating_data.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/std/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="29" selection-start-line="16" selection-end-line="29" />
+            <state relative-caret-position="506">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -33,13 +32,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="321">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3300">
+              <caret line="150" selection-start-line="150" selection-end-line="150" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,6 +68,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>yield</find>
+      <find>move_to</find>
+      <find>set_stage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,6 +83,7 @@
         <option value="$PROJECT_DIR$/std/long_de_onda_1_tira.csv" />
         <option value="$PROJECT_DIR$/../../data mediciones/25del9/analyze.py" />
         <option value="$PROJECT_DIR$/std/main.py" />
+        <option value="$PROJECT_DIR$/std/StageAndSpec.py" />
       </list>
     </option>
   </component>
@@ -83,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,7 +114,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,18 +264,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/std/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" selection-start-line="16" selection-end-line="29" />
+        <state relative-caret-position="506">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/std/thor_stepm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3300">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/std/StageAndSpec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="321">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

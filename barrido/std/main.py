@@ -1,6 +1,6 @@
 import logging,threading,time
 from logging.handlers import SocketHandler
-from std.StageAndSpec import System
+from StageAndSpec import System
 log = logging.getLogger('Root logger')
 log.setLevel(1)
 socket_handler = SocketHandler('127.0.0.1', 19996)

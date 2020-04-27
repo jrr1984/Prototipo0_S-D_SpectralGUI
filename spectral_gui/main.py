@@ -71,9 +71,6 @@ def imshow_choice(booleanish,opt):
     im_change = booleanish
     return im_change,im_option
 
-#pretty stuff for plots:
-#para poner la leyenda fuera y arriba del grafico
-# legend(bbox_to_anchor=(0,1.02,1,.102),loc=3, ncol=2, borderaxespad=0)
 
 class SpectralGui(tk.Tk):
 
@@ -87,6 +84,7 @@ class SpectralGui(tk.Tk):
         container = tk.Frame(self)
         container.pack(side="top", fill="both",expand=True)
         container.grid_rowconfigure(0,weight=1)
+
         container.grid_columnconfigure(0, weight=1)
 
         menubar = tk.Menu(container)
@@ -135,7 +133,7 @@ class SpectralGui(tk.Tk):
         imshowChoice.add_command(label="RGB",
                                   command= lambda: imshow_choice(True,0))
         imshowChoice.add_separator()
-        imshowChoice.add_command(label="DELTA Spectra",
+        imshowChoice.add_command(label="CHI SQUARE",
                                   command=lambda: imshow_choice(True,1))
         menubar.add_cascade(label= "Imshow Options",menu=imshowChoice)
 
@@ -175,14 +173,14 @@ class SpectralPage(tk.Frame):
             img[:, :, 0] = R
             img[:, :, 1] = G
             img[:, :, 2] = B
-            self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24500.0])
+            self.a0.imshow(img, interpolation='none', aspect='auto', origin='lower', extent=[0.0, 13000.0, 0, 24600.0])
         else:
             RGB_df = RGB_mean_df
             chi_array = RGB_df.iloc[:].values
             chi_sq = chi_array.reshape(492, 260)
             clim = (0,.5)
             self.a0.imshow(chi_sq,clim = clim, interpolation='none', aspect='auto', origin='lower',
-                            extent=[0.0, 13000.0, 0, 24500.0])
+                            extent=[0.0, 13000.0, 0, 24600.0])
 
 
 
@@ -230,7 +228,7 @@ class SpectralPage(tk.Frame):
                             colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
                             spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
                             mouse_pos = mouse_pos[0]
-                            wavelengths = wavel_array #wavel_array[:, 0]
+                            wavelengths = wavel_array
                             spectrum = np.transpose(inten_norm)
                             # print(spectrum)
                             self.a1.plot(wavel_array, spectrum, color='darkred')
@@ -256,7 +254,7 @@ class SpectralPage(tk.Frame):
                             colorlist = list(zip(norm(wl), [wavelength_to_rgb(w) for w in wl]))
                             spectralmap = matplotlib.colors.LinearSegmentedColormap.from_list("spectrum", colorlist)
                             mouse_pos = mouse_pos[0]
-                            wavelengths = wavel_array  # wavel_array[:, 0]
+                            wavelengths = wavel_array
                             spectrum = np.transpose(inten_df.iloc[mouse_pos, :])
                             self.a1.plot(wavel_array, spectrum, color='darkred')
                             y = np.linspace(0, np.max(spectrum), 100)

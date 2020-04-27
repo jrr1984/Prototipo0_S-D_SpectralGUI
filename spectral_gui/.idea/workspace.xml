@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26342071-a78d-4a5c-9336-6f862c52d7d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plot_thorlabs_light_source.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Instrumental" beforeDir="false" afterPath="$PROJECT_DIR$/../Instrumental" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../cuaderno de lab/cuaderno_de_lab.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../barrido/std/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../barrido/std/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/intensity bands-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/intensity bands-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data bandas slides.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data bandas slides.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/intensity bands.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/intensity bands.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -24,10 +21,46 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="220">
+              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plot_thorlabs_light_source.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tranmission_main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1716">
+              <caret line="80" column="70" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/de_data_meds.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -44,11 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>draw</find>
-      <find>Func</find>
-      <find>animation</find>
-      <find>anima</find>
-      <find>curva</find>
       <find>forma</find>
       <find>ims</find>
       <find>norm</find>
@@ -59,7 +87,6 @@
       <find>changeSpec</find>
       <find>im_choice</find>
       <find>im_change</find>
-      <find>im_option</find>
       <find>option</find>
       <find>global</find>
       <find>fill_bet</find>
@@ -74,6 +101,12 @@
       <find>RGB_mean</find>
       <find>bar</find>
       <find>clim</find>
+      <find>normali</find>
+      <find>light_df</find>
+      <find>rgb_mean</find>
+      <find>im_option</find>
+      <find>xy_pos</find>
+      <find>max</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,7 +118,6 @@
         <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/spectral_gui.py" />
         <option value="$PROJECT_DIR$/animated_7h.py" />
-        <option value="$PROJECT_DIR$/de_data_meds.py" />
         <option value="$PROJECT_DIR$/blah.py" />
         <option value="$PROJECT_DIR$/another_ex.py" />
         <option value="$PROJECT_DIR$/main_2.py" />
@@ -97,12 +129,15 @@
         <option value="$PROJECT_DIR$/jhdsfsj.py" />
         <option value="$PROJECT_DIR$/jkdfha.py" />
         <option value="$PROJECT_DIR$/marks_plot.py" />
+        <option value="$PROJECT_DIR$/tranmission_main.py" />
+        <option value="$PROJECT_DIR$/de_data_meds.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/plots_thesis.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
+    <option name="x" value="948" />
     <option name="width" value="981" />
     <option name="height" value="1032" />
   </component>
@@ -112,6 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,13 +159,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Anaconda3/envs/xystage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xystage/open_frame_xy_stage" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -207,27 +242,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_threading" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="spectral_gui" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_threading.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="marks_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="spectral_gui" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -249,13 +263,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plots_thesis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="spectral_gui" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\juanr\Documents\thorlabs_step_motors_ZST213B\spectral_gui\plot_thorlabs_light_source.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.plots_thesis" />
         <item itemvalue="Python.marks_plot" />
         <item itemvalue="Python.jkdfha" />
         <item itemvalue="Python.jhdsfsj" />
-        <item itemvalue="Python.main_threading" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +320,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.023828436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22160445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,23 +362,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/colorpy/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/26del9/new_csv_from_another.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/26del9/analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/colorpy/test.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/26del9/new_csv_from_another.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/26del9/analyze.py" />
     <entry file="file://$PROJECT_DIR$/../barrido/std/pruebita.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-939" />
@@ -358,52 +379,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/25del9/data_vis_seaborn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/25del9/analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/24del9/analyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="84" lean-forward="true" selection-start-line="64" selection-end-line="84" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../data mediciones/colorpy/plots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2638">
-          <folding>
-            <element signature="e#4003#4022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/25del9/data_vis_seaborn.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/25del9/analyze.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/24del9/analyze.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/test.py" />
+    <entry file="file://$PROJECT_DIR$/../../data mediciones/colorpy/plots.py" />
     <entry file="file://$PROJECT_DIR$/main_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1218">
@@ -448,13 +428,6 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/de_data_meds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -505,10 +478,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="220">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot_thorlabs_light_source.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tranmission_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1716">
+          <caret line="80" column="70" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de_data_meds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

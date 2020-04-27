@@ -2,7 +2,7 @@ import time,csv
 import logging
 import numpy as np
 from logging.handlers import SocketHandler
-from std.thor_stepm import ThorlabsStageWithStepMotors
+from thor_stepm import ThorlabsStageWithStepMotors
 from instrumental import instrument, list_instruments
 log = logging.getLogger('Root logger')
 log.setLevel(1)  # to send all messages to cutelog
@@ -23,7 +23,6 @@ class System():
         time.sleep(0.1)
         self.stage = ThorlabsStageWithStepMotors()
         self.stage.set_stage()
-        #self.stage.set_vel_params(5392 * 100000, 5392 * 100000,5392 * 100000, 5392 * 100000)
 
 
 
@@ -77,7 +76,6 @@ class System():
         while thread.is_alive():
             if i != self.step:
                 inten.append(self.intensity)
-                #wavel.append(self.wavelength)
                 wavel.append(self.wavelength)
                 i = self.step
         with open('inten.csv', 'w', newline='') as f:
