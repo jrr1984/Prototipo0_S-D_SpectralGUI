@@ -1,1 +1,1 @@
-# thorlabs_step_motors_ZST213B
+# Prototipo0_S-D_SpectralGUI
