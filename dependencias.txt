@@ -1,0 +1,93 @@
+# packages in environment at C:\Users\juanr\Anaconda3\envs\syst:
+#
+# Name                    Version                   Build  Channel
+attrs                     19.1.0                     py_0    conda-forge
+backcall                  0.1.0                      py_0    conda-forge
+bleach                    3.1.0                      py_0    conda-forge
+ca-certificates           2019.3.9             hecc5488_0    conda-forge
+certifi                   2019.3.9                 py36_0    conda-forge
+cffi                      1.12.3           py36h7a1dbc1_0    anaconda
+colorama                  0.4.1                      py_0    conda-forge
+cycler                    0.10.0                     py_1    conda-forge
+decorator                 4.4.0                      py_0    conda-forge
+defusedxml                0.5.0                      py_1    conda-forge
+entrypoints               0.3                   py36_1000    conda-forge
+freetype                  2.10.0               h5db478b_0    conda-forge
+future                    0.17.1                   pypi_0    pypi
+icu                       58.1                     vc14_0    conda-forge
+instrumental-lib          0.6.dev0                 pypi_0    pypi
+intel-openmp              2019.3                      203
+ipykernel                 5.1.1            py36h39e3cac_0    conda-forge
+ipython                   7.5.0            py36h39e3cac_0    conda-forge
+ipython_genutils          0.2.0                      py_1    conda-forge
+jedi                      0.13.3                   py36_0    conda-forge
+jinja2                    2.10.1                     py_0    conda-forge
+jpeg                      9c                hfa6e2cd_1001    conda-forge
+jsonschema                3.0.1                    py36_0    conda-forge
+jupyter_client            5.2.4                      py_3    conda-forge
+jupyter_core              4.4.0                      py_0    conda-forge
+kiwisolver                1.1.0            py36he980bc4_0    conda-forge
+libblas                   3.8.0                    10_mkl    conda-forge
+libcblas                  3.8.0                    10_mkl    conda-forge
+liblapack                 3.8.0                    10_mkl    conda-forge
+libpng                    1.6.37               h7602738_0    conda-forge
+libsodium                 1.0.16            h2fa13f4_1001    conda-forge
+m2w64-gcc-libgfortran     5.3.0                         6
+m2w64-gcc-libs            5.3.0                         7
+m2w64-gcc-libs-core       5.3.0                         7
+m2w64-gmp                 6.1.0                         2
+m2w64-libwinpthread-git   5.0.0.4634.697f757               2
+markupsafe                1.1.1            py36hfa6e2cd_0    conda-forge
+matplotlib                3.1.0                    py36_1    conda-forge
+matplotlib-base           3.1.0            py36h2852a4a_1    conda-forge
+mistune                   0.8.4           py36hfa6e2cd_1000    conda-forge
+mkl                       2019.3                      203
+msl-equipment             0.1.0.dev0               pypi_0    pypi
+msl-loadlib               0.6.0                    pypi_0    pypi
+msys2-conda-epoch         20160418                      1
+nbconvert                 5.5.0                      py_0    conda-forge
+nbformat                  4.4.0                      py_1    conda-forge
+nicelib                   0.6                      pypi_0    pypi
+notebook                  5.7.8                    py36_1    conda-forge
+numpy                     1.16.4           py36hc71023c_0    conda-forge
+openssl                   1.1.1b               hfa6e2cd_2    conda-forge
+pandoc                    2.7.2                         0    conda-forge
+pandocfilters             1.4.2                      py_1    conda-forge
+parso                     0.4.0                      py_0    conda-forge
+pickleshare               0.7.5                 py36_1000    conda-forge
+pint                      0.9                      pypi_0    pypi
+pip                       19.1.1                   py36_0    conda-forge
+prometheus_client         0.6.0                      py_0    conda-forge
+prompt_toolkit            2.0.9                      py_0    conda-forge
+pycparser                 2.19                     py36_0    anaconda
+pygments                  2.4.2                      py_0    conda-forge
+pyparsing                 2.4.0                      py_0    conda-forge
+pyqt                      5.9.2            py36h6538335_0    conda-forge
+pyrsistent                0.15.2           py36hfa6e2cd_0    conda-forge
+pyserial                  3.4                      pypi_0    pypi
+python                    3.6.7             he025d50_1004    conda-forge
+python-dateutil           2.8.0                      py_0    conda-forge
+pyvisa                    1.9.1                 py36_1000    conda-forge
+pywinpty                  0.5.5                 py36_1000    conda-forge
+pyzmq                     18.0.1           py36he7828b0_1    conda-forge
+qt                        5.9.7                hc6833c9_1    conda-forge
+scipy                     1.3.0                    pypi_0    pypi
+send2trash                1.5.0                      py_0    conda-forge
+setuptools                41.0.1                   py36_0    conda-forge
+sip                       4.19.8          py36h6538335_1000    conda-forge
+six                       1.12.0                   pypi_0    pypi
+sqlite                    3.28.0               hfa6e2cd_0    conda-forge
+terminado                 0.8.2                    py36_0    conda-forge
+testpath                  0.4.2                   py_1001    conda-forge
+tornado                   6.0.2            py36hfa6e2cd_0    conda-forge
+traitlets                 4.3.2                 py36_1000    conda-forge
+vc                        14.1                 h21ff451_3    anaconda
+vs2015_runtime            15.5.2                        3    anaconda
+wcwidth                   0.1.7                      py_1    conda-forge
+webencodings              0.5.1                      py_1    conda-forge
+wheel                     0.33.4                   py36_0    conda-forge
+wincertstore              0.2                   py36_1002    conda-forge
+winpty                    0.4.3                         4    conda-forge
+xlrd                      1.2.0                    pypi_0    pypi
+zeromq                    4.3.1             he025d50_1000    conda-forge
+zlib                      1.2.11            h2fa13f4_1004    conda-forge
