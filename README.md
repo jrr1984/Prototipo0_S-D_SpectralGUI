@@ -6,7 +6,7 @@ Repositorio de loss programas utilizados en el Prototipo preliminar, de la secci
 1. [Desarrollo de un sistema automatizado de adquisición del espectro de transmisión de cada una de las bandas del filtro](https://github.com/jrr1984/Prototipo0\_S-D\_SpectralGUI/blob/master/barrido/std)
 2. [Driver de control del espectrómetro CCS200/M del fabricante Thorlabs](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/syst/CCS200.py)
 3. [Driver de control de los motores paso a paso ZST213B de Thorlabs, montados sobre una stage XYZ MT3/M de Thorlabs](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/barrido/std/thor_stepm.py)
-4. [Interfaz gráfica de mapas multiespectrales, de transmisión y del chi cuadrado](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/spectral_gui/main.py)
+4. [Interfaz gráfica realizada con Tkinter de mapas multiespectrales, de transmisión y del chi cuadrado](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/spectral_gui/main.py)
 
 ![Interfaz gráfica cuyo \textit{imshow} tiene una paleta de colores del espectro visible, de acuerdo al espacio de color CIE XYZ](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/spectral_gui/guirgb.png)
 
