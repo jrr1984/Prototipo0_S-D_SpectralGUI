@@ -1,7 +1,7 @@
 # Prototipo0_S-D_SpectralGUI
 
 
-Repositorio de loss programas utilizados en el Prototipo preliminar, de la sección 3.1, capítulo 3, Diseño, construcción y aplicación de un microespectrómetro, de la [Tesis de Licenciatura](https://github.com/jrr1984/master_thesis_scratch_and_dig/blob/master/tesis_tex/main.pdf).
+Repositorio de los programas utilizados en el Prototipo preliminar, de la sección 3.1, capítulo 3, Diseño, construcción y aplicación de un microespectrómetro, de la [Tesis de Licenciatura](https://github.com/jrr1984/master_thesis_scratch_and_dig/blob/master/tesis_tex/main.pdf).
 
 1. [Desarrollo de un sistema automatizado de adquisición del espectro de transmisión de cada una de las bandas del filtro](https://github.com/jrr1984/Prototipo0\_S-D\_SpectralGUI/blob/master/barrido/std)
 2. [Driver de control del espectrómetro CCS200/M del fabricante Thorlabs](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/syst/CCS200.py)
