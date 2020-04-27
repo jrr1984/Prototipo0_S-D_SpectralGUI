@@ -8,6 +8,8 @@ Repositorio de loss programas utilizados en el Prototipo preliminar, de la secci
 3. [Driver de control de los motores paso a paso ZST213B de Thorlabs, montados sobre una stage XYZ MT3/M de Thorlabs](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/barrido/std/thor_stepm.py)
 4. [Interfaz gráfica de mapas multiespectrales, de transmisión y del chi cuadrado](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/spectral_gui/main.py)
 
+![Interfaz gráfica cuyo \textit{imshow} tiene una paleta de colores del espectro visible, de acuerdo al espacio de color CIE XYZ](https://github.com/jrr1984/Prototipo0_S-D_SpectralGUI/blob/master/spectral_gui/guirgb.png)
+
 5. [Algoritmo de detección y cuantificación de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/defects_thresholding.py)
 6. [Método alternativo para detectar agujeros (en desarrollo)](https://github.com/jrr1984/defects_analysis/blob/master/find_contours_holes_trial.py)
 7. [Análisis cuantitativo de los defectos](https://github.com/jrr1984/defects_analysis/blob/master/Defects%20analysis.ipynb)
